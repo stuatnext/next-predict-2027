@@ -35,6 +35,14 @@ Single-page React (Vite + Tailwind) app. Main content lives in `src/App.jsx`
   product, not spend.
 - Venue/date lines say "October 2027 · New York City · exact dates and venue
   to be announced" — update them the moment Event Ops confirms.
+- OPEN DECISION on the ticket ladder: `ticketLadder` uses the master's Early
+  Bird prices (VIP $2,199 / Full $1,299 / Conference $949). The NEXT Commercial
+  2027 plan carries a different set ($2,599 / $1,499 / $1,099); Standard and
+  Late agree in both. The master's Early Bird sits 34–38% below the closing
+  price against a portfolio benchmark band of 15–30%, so the recommendation to
+  Stuart is to adopt the plan's Early Bird. If that is approved, update the
+  three Early Bird prices and the two formula-linked rates that follow Full
+  Event (Day Pass to $899 at 60%, Operator & Regulator to $750 at 50%).
 - Hold/do-not-sell items (Gallery Projection Screens, Highline Hall Back
   Columns, Projection Mapped Millwork Wall, Wall Frame Around LED) and the
   unvalidated Awards concept are intentionally NOT in the brochure.
