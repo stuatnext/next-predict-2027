@@ -33,6 +33,10 @@ Single-page React (Vite + Tailwind) app. Main content lives in `src/App.jsx`
 - Recognition tiers: Silver <€30k, Gold €30–79,999, Platinum €80–134,999,
   Diamond ≥€135k by total spend; Headline is gated on the Headline Partner
   product, not spend.
+- Design follows the NEXT.io house system shared with the New York and Valletta
+  brochures: brand yellow #ffcf33 on brand dark #242426, Inter throughout, and
+  the official NEXTPredict logo in `public/logos/`. Keep any new work on those
+  tokens — no separate palette or display face for this event.
 - Venue/date lines say "October 2027 · New York City · exact dates and venue
   to be announced" — update them the moment Event Ops confirms.
 - OPEN DECISION on the ticket ladder: `ticketLadder` uses the master's Early

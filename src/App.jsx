@@ -17,9 +17,9 @@ const TIERS = [
   { name: 'Silver',   min: 0,      color: 'text-brand-gray' },
   { name: 'Gold',     min: 30000,  color: 'text-yellow-400' },
   { name: 'Platinum', min: 80000,  color: 'text-blue-300' },
-  { name: 'Diamond',  min: 135000, color: 'text-brand-green' },
+  { name: 'Diamond',  min: 135000, color: 'text-brand-yellow' },
 ]
-const HEADLINE_TIER = { name: 'Headline', min: null, color: 'text-brand-green' }
+const HEADLINE_TIER = { name: 'Headline', min: null, color: 'text-brand-yellow' }
 const HEADLINE_PRODUCT_IDS = [1] // "Headline Partner"
 
 const hasHeadline = (cart) => Array.isArray(cart) && cart.some((i) => HEADLINE_PRODUCT_IDS.includes(i.id))
@@ -60,8 +60,8 @@ function downloadProposalPDF(cart, rebooking) {
   const total = cart.reduce((s, i) => s + (i.poa ? 0 : (rebooking ? Math.round(i.price * 0.85) : i.price)), 0)
   const tier = resolveTier(total, cart)
   const nextTier = nextSpendTier(total, cart)
-  const tierColors = { Silver: '#9ca3af', Gold: '#f59e0b', Platinum: '#93c5fd', Diamond: '#2fe08d', Headline: '#2fe08d' }
-  const tierColor = tierColors[tier.name] || '#2fe08d'
+  const tierColors = { Silver: '#9ca3af', Gold: '#f59e0b', Platinum: '#93c5fd', Diamond: '#ffcf33', Headline: '#ffcf33' }
+  const tierColor = tierColors[tier.name] || '#ffcf33'
   const rows = cart.map((item) => {
     const p = rebooking ? Math.round(item.price * 0.85) : item.price
     const bulletItems = item.bullets
@@ -87,13 +87,13 @@ function downloadProposalPDF(cart, rebooking) {
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:#fff}
-    .header{background:#070b14;color:#fff;padding:48px 48px 40px}
+    .header{background:#242426;color:#fff;padding:48px 48px 40px}
     .logo{font-size:26px;font-weight:900;text-transform:uppercase;letter-spacing:-0.5px;margin-bottom:6px}
-    .logo span{color:#2fe08d}
-    .sub{color:#8a93a5;font-size:13px;margin-top:4px}
+    .logo span{color:#ffcf33}
+    .sub{color:#888888;font-size:13px;margin-top:4px}
     .body{padding:40px 48px}
     .label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#999;margin-bottom:14px}
-    .discount{background:#ecfdf3;border:1px solid #2fe08d;border-radius:6px;padding:10px 16px;font-size:13px;color:#065f37;margin-bottom:24px}
+    .discount{background:#fffbea;border:1px solid #ffcf33;border-radius:6px;padding:10px 16px;font-size:13px;color:#996c00;margin-bottom:24px}
     .tier-box{border-radius:8px;padding:20px 24px;margin-bottom:32px;display:flex;align-items:center;justify-content:space-between;border:2px solid ${tierColor}}
     .tier-name{font-size:22px;font-weight:900;text-transform:uppercase;color:${tierColor}}
     .tier-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#999;margin-bottom:4px}
@@ -102,9 +102,9 @@ function downloadProposalPDF(cart, rebooking) {
     thead tr{background:#f5f5f5}
     th{padding:10px 16px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#999}
     th:last-child{text-align:right}
-    .total td{background:#070b14;color:#fff;padding:16px;font-weight:900;font-size:15px}
-    .total td:last-child{text-align:right;color:#2fe08d;font-size:20px}
-    .footer{padding:32px 48px;border-top:3px solid #2fe08d;margin-top:40px}
+    .total td{background:#242426;color:#fff;padding:16px;font-weight:900;font-size:15px}
+    .total td:last-child{text-align:right;color:#ffcf33;font-size:20px}
+    .footer{padding:32px 48px;border-top:3px solid #ffcf33;margin-top:40px}
     .footer p{font-size:13px;color:#666;line-height:1.7}
     .footer strong{color:#1a1a1a}
     @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
@@ -187,23 +187,23 @@ function downloadRateCardPDF() {
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:#fff;font-size:12px;line-height:1.5}
-    .cover{background:#070b14;color:#fff;padding:56px 48px}
+    .cover{background:#242426;color:#fff;padding:56px 48px}
     .cover h1{font-size:30px;font-weight:900;text-transform:uppercase;letter-spacing:-0.5px}
-    .cover h1 span{color:#2fe08d}
-    .cover p{color:#8a93a5;margin-top:8px;font-size:13px}
+    .cover h1 span{color:#ffcf33}
+    .cover p{color:#888888;margin-top:8px;font-size:13px}
     section{padding:28px 48px 8px;page-break-before:auto}
-    h2{font-size:18px;font-weight:900;text-transform:uppercase;border-bottom:3px solid #2fe08d;padding-bottom:6px;margin-bottom:16px;page-break-after:avoid}
+    h2{font-size:18px;font-weight:900;text-transform:uppercase;border-bottom:3px solid #ffcf33;padding-bottom:6px;margin-bottom:16px;page-break-after:avoid}
     .product{border:1px solid #e5e5e5;border-radius:8px;padding:14px 16px;margin-bottom:14px;page-break-inside:avoid}
     .phead{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
     .phead h3{font-size:14px;font-weight:800;display:inline}
-    .avail{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#065f37;background:#e6faf0;border-radius:4px;padding:2px 8px;margin-left:8px;white-space:nowrap}
+    .avail{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#996c00;background:#fff6da;border-radius:4px;padding:2px 8px;margin-left:8px;white-space:nowrap}
     .price{font-size:16px;font-weight:900;white-space:nowrap}
     .quote{font-style:italic;color:#555;margin:6px 0 8px}
     ul{padding-left:18px}
     li{margin-bottom:2px}
-    li.note{list-style:none;margin-left:-18px;background:#e9fbf2;border:1px solid #a9ecc9;border-radius:4px;padding:3px 8px;font-size:11px;margin-top:4px}
+    li.note{list-style:none;margin-left:-18px;background:#fff8e1;border:1px solid #f2dd9a;border-radius:4px;padding:3px 8px;font-size:11px;margin-top:4px}
     li.warn{list-style:none;margin-left:-18px;background:#fdecec;border:1px solid #f3b8b8;border-radius:4px;padding:3px 8px;font-size:11px;margin-top:4px}
-    .foot{padding:24px 48px 40px;border-top:3px solid #2fe08d;margin-top:24px;color:#666;font-size:11px;line-height:1.7}
+    .foot{padding:24px 48px 40px;border-top:3px solid #ffcf33;margin-top:24px;color:#666;font-size:11px;line-height:1.7}
     @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
   </style></head><body>
   <div class="cover">
@@ -531,11 +531,11 @@ function TierProgress({ total, cart }) {
         <span className="text-brand-gray/70 shrink-0">
           {next
             ? <>€{toNext.toLocaleString('en-US')} to reach <span className={`font-bold ${next.color}`}>{next.name}</span></>
-            : <span className="text-brand-green font-bold">{current.name} level reached ✦</span>}
+            : <span className="text-brand-yellow font-bold">{current.name} level reached ✦</span>}
         </span>
       </div>
       <div className="h-1.5 bg-brand-white/10 rounded-full overflow-hidden">
-        <div className="h-full bg-brand-green rounded-full transition-all duration-500" style={{ width: `${pct}%` }} />
+        <div className="h-full bg-brand-yellow rounded-full transition-all duration-500" style={{ width: `${pct}%` }} />
       </div>
     </div>
   )
@@ -550,20 +550,20 @@ function DeliverablesList({ bullets, textClass = 'text-brand-white/90', spacing 
 
   const renderLine = (line, i) => {
     if (line.startsWith('📅')) return (
-      <li key={i} className="flex items-center gap-2 bg-brand-green/8 border border-brand-green/20 rounded-lg px-3 py-2 text-xs text-brand-green/90 font-medium">
-        <CalendarDays className="w-3.5 h-3.5 shrink-0 text-brand-green" aria-hidden />
+      <li key={i} className="flex items-center gap-2 bg-brand-yellow/8 border border-brand-yellow/20 rounded-lg px-3 py-2 text-xs text-brand-yellow/90 font-medium">
+        <CalendarDays className="w-3.5 h-3.5 shrink-0 text-brand-yellow" aria-hidden />
         <span>{line.slice(2).trim()}</span>
       </li>
     )
     if (line.startsWith('⚠️')) return (
-      <li key={i} className="flex items-start gap-2 bg-amber-500/8 border border-amber-500/25 rounded-lg px-3 py-2 text-xs text-amber-200/90 font-medium">
+      <li key={i} className="flex items-start gap-2 bg-red-500/8 border border-red-500/25 rounded-lg px-3 py-2 text-xs text-red-300/90 font-medium">
         <span className="shrink-0 mt-0.5">⚠️</span>
         <span>{line.slice(2).trim()}</span>
       </li>
     )
     return (
       <li key={i} className={`flex items-start text-sm ${textClass}`}>
-        <CircleCheck className="text-brand-green mr-3 shrink-0 mt-0.5 w-4 h-4" aria-hidden />
+        <CircleCheck className="text-brand-yellow mr-3 shrink-0 mt-0.5 w-4 h-4" aria-hidden />
         <span className="leading-relaxed">{line}</span>
       </li>
     )
@@ -575,7 +575,7 @@ function DeliverablesList({ bullets, textClass = 'text-brand-white/90', spacing 
       {hiddenCount > 0 && (
         <button
           onClick={() => setExpanded((v) => !v)}
-          className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-green hover:text-brand-green/80 transition-colors"
+          className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-yellow hover:text-brand-yellow/80 transition-colors"
         >
           {expanded ? 'Show less' : `Show ${hiddenCount} more`}
           <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`} aria-hidden />
@@ -599,25 +599,25 @@ function FeaturedPricingCard({ item, onAdd, rebooking, cartCount = 0, conflicted
   const max = item.exclusive ? 1 : (item.avail ?? Infinity)
   const atLimit = cartCount >= max || item.status === 'sold' || item.status === 'reserved' || conflicted
   return (
-    <div className="col-span-full relative overflow-hidden rounded-2xl border border-brand-green/40 bg-gradient-to-br from-brand-green/[0.14] via-brand-ink to-brand-ink group hover:border-brand-green/70 transition-all duration-300 shadow-[0_0_60px_rgba(47,224,141,0.08)] hover:shadow-[0_0_80px_rgba(47,224,141,0.16)]">
-      <div className="absolute top-0 left-0 w-80 h-80 bg-brand-green/8 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-0 right-0 bg-brand-green text-brand-dark text-[10px] font-black uppercase tracking-widest px-5 py-2 rounded-bl-xl z-20 shadow-md">✦ {item.exclusive ? 'Exclusive' : 'Featured'}</div>
+    <div className="col-span-full relative overflow-hidden rounded-2xl border border-brand-yellow/40 bg-gradient-to-br from-brand-yellow/[0.18] via-brand-dark/95 to-brand-dark group hover:border-brand-yellow/70 transition-all duration-300 shadow-[0_0_60px_rgba(255,207,51,0.08)] hover:shadow-[0_0_80px_rgba(255,207,51,0.16)]">
+      <div className="absolute top-0 left-0 w-80 h-80 bg-brand-yellow/8 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 bg-brand-yellow text-brand-dark text-[10px] font-black uppercase tracking-widest px-5 py-2 rounded-bl-xl z-20 shadow-md">✦ {item.exclusive ? 'Exclusive' : 'Featured'}</div>
       <div className="relative z-10 p-8 md:p-10 flex flex-col lg:flex-row gap-8 lg:gap-14">
         <div className="lg:w-5/12">
           <h4 className="text-3xl md:text-4xl font-black text-brand-white mb-5 leading-tight pr-4">{item.title}</h4>
           {item.poa ? (
-            <p className="text-4xl md:text-5xl font-black text-brand-green mb-5 leading-none">POA</p>
+            <p className="text-4xl md:text-5xl font-black text-brand-yellow mb-5 leading-none">POA</p>
           ) : rebooking ? (
             <div className="mb-5">
               <p className="text-xl text-brand-gray/50 line-through">{fmtPrice(item.price)}</p>
-              <p className="text-4xl md:text-5xl font-black text-brand-green leading-none">{fmtPrice(discountedPrice)}</p>
-              <p className="text-xs text-brand-green/70 font-semibold mt-1.5 uppercase tracking-wide">15% rebooking rate applied</p>
+              <p className="text-4xl md:text-5xl font-black text-brand-yellow leading-none">{fmtPrice(discountedPrice)}</p>
+              <p className="text-xs text-brand-yellow/70 font-semibold mt-1.5 uppercase tracking-wide">15% rebooking rate applied</p>
             </div>
           ) : (
-            <p className="text-4xl md:text-5xl font-black text-brand-green mb-5 leading-none">{fmtPrice(item.price)}</p>
+            <p className="text-4xl md:text-5xl font-black text-brand-yellow mb-5 leading-none">{fmtPrice(item.price)}</p>
           )}
           <div className="mb-6 relative">
-            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-brand-green/60 rounded-full" />
+            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-brand-yellow/60 rounded-full" />
             <p className="text-brand-gray/80 italic leading-relaxed text-sm pl-4">{item.quote.replace(/^"|"$/g, '')}</p>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -625,7 +625,7 @@ function FeaturedPricingCard({ item, onAdd, rebooking, cartCount = 0, conflicted
               <span key={t} className="px-2 py-1 bg-brand-white/10 text-brand-white text-[10px] uppercase tracking-wider rounded-md font-medium">{t}</span>
             ))}
             {item.type.map((t) => (
-              <span key={t} className="px-2 py-1 bg-brand-green/20 text-brand-green text-[10px] uppercase tracking-wider rounded-md font-medium">{t}</span>
+              <span key={t} className="px-2 py-1 bg-brand-yellow/20 text-brand-yellow text-[10px] uppercase tracking-wider rounded-md font-medium">{t}</span>
             ))}
           </div>
         </div>
@@ -637,7 +637,7 @@ function FeaturedPricingCard({ item, onAdd, rebooking, cartCount = 0, conflicted
             <button
               onClick={() => onAdd(item)}
               disabled={atLimit}
-              className={`w-full py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 ${atLimit ? 'bg-brand-green/30 text-brand-green cursor-not-allowed' : 'bg-brand-green text-brand-dark hover:brightness-110 shadow-[0_0_20px_rgba(47,224,141,0.3)]'}`}
+              className={`w-full py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 ${atLimit ? 'bg-brand-yellow/30 text-brand-yellow cursor-not-allowed' : 'bg-brand-yellow text-brand-dark hover:brightness-110 shadow-[0_0_20px_rgba(255,207,51,0.3)]'}`}
             >
               <Calculator className="w-4 h-4" />
               {cardCtaLabel(item, { atLimit, conflicted })}
@@ -656,7 +656,7 @@ function PricingCard({ item, onAdd, rebooking, cartCount = 0, conflicted = false
   const availLabel = item.status === 'sold' ? 'Sold Out' : item.status === 'reserved' ? 'Reserved'
     : item.exclusive ? 'Exclusive' : item.avail ? `${item.avail} Available` : null
   return (
-    <div className={`relative flex flex-col rounded-2xl border bg-brand-ink/80 transition-all duration-300 overflow-hidden ${item.status === 'sold' ? 'border-brand-white/5 opacity-50' : 'border-brand-white/10 hover:border-brand-green/50 hover:shadow-[0_0_40px_rgba(47,224,141,0.08)]'}`}>
+    <div className={`relative flex flex-col rounded-2xl border bg-brand-white/5 transition-all duration-300 overflow-hidden ${item.status === 'sold' ? 'border-brand-white/5 opacity-50' : 'border-brand-white/10 hover:border-brand-yellow/50 hover:bg-brand-white/10 hover:shadow-[0_0_40px_rgba(255,207,51,0.08)]'}`}>
       {availLabel && (
         <div className={`absolute top-0 right-0 text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-bl-xl z-10 ${item.status === 'sold' ? 'bg-red-500/80 text-white' : item.status === 'reserved' ? 'bg-amber-500/90 text-brand-dark' : 'bg-brand-white/10 text-brand-gray'}`}>
           {availLabel}
@@ -665,16 +665,16 @@ function PricingCard({ item, onAdd, rebooking, cartCount = 0, conflicted = false
       <div className="p-6 md:p-7 flex flex-col flex-1">
         <h4 className="text-xl font-black text-brand-white mb-3 leading-snug pr-20">{item.title}</h4>
         {item.poa ? (
-          <p className="text-3xl font-black text-brand-green mb-4 leading-none">POA</p>
+          <p className="text-3xl font-black text-brand-yellow mb-4 leading-none">POA</p>
         ) : rebooking ? (
           <div className="mb-4">
             <p className="text-sm text-brand-gray/50 line-through">{fmtPrice(item.price)}</p>
-            <p className="text-3xl font-black text-brand-green leading-none">{fmtPrice(discountedPrice)}</p>
+            <p className="text-3xl font-black text-brand-yellow leading-none">{fmtPrice(discountedPrice)}</p>
           </div>
         ) : (
-          <p className="text-3xl font-black text-brand-green mb-4 leading-none">{fmtPrice(item.price)}</p>
+          <p className="text-3xl font-black text-brand-yellow mb-4 leading-none">{fmtPrice(item.price)}</p>
         )}
-        <p className="text-brand-gray/80 italic text-xs leading-relaxed mb-4 border-l-2 border-brand-green/40 pl-3">{item.quote.replace(/^"|"$/g, '')}</p>
+        <p className="text-brand-gray/80 italic text-xs leading-relaxed mb-4 border-l-2 border-brand-yellow/40 pl-3">{item.quote.replace(/^"|"$/g, '')}</p>
         <div className="flex-1">
           <DeliverablesList bullets={item.bullets} textClass="text-brand-white/80" spacing="space-y-2" collapsedCount={4} />
         </div>
@@ -686,40 +686,11 @@ function PricingCard({ item, onAdd, rebooking, cartCount = 0, conflicted = false
         <button
           onClick={() => onAdd(item)}
           disabled={atLimit}
-          className={`w-full py-3 rounded-xl font-black uppercase tracking-widest text-xs transition-all duration-300 flex items-center justify-center gap-2 ${atLimit ? 'bg-brand-white/10 text-brand-gray cursor-not-allowed' : 'bg-brand-green/15 text-brand-green border border-brand-green/40 hover:bg-brand-green hover:text-brand-dark'}`}
+          className={`w-full py-3 rounded-xl font-black uppercase tracking-widest text-xs transition-all duration-300 flex items-center justify-center gap-2 ${atLimit ? 'bg-brand-white/10 text-brand-gray cursor-not-allowed' : 'bg-brand-yellow/15 text-brand-yellow border border-brand-yellow/40 hover:bg-brand-yellow hover:text-brand-dark'}`}
         >
           <Calculator className="w-3.5 h-3.5" />
           {cardCtaLabel(item, { atLimit, conflicted })}
         </button>
-      </div>
-    </div>
-  )
-}
-
-// ─── Ticker strip ───────────────────────────────────────────────────────────
-function Ticker() {
-  const items = [
-    ['HEADLINE PARTNER', '1 AVAILABLE'],
-    ['LEADERSHIP STAGE', 'SOLD OUT 2026'],
-    ['EXHIBITION STANDS', '12 × 3x2'],
-    ['NEXTWORKING NIGHTS', '3 EVENINGS'],
-    ['STAGES', '3 ROOMS'],
-    ['START-UP ZONE', '12 ACTIVATIONS'],
-    ['PRIVATE MEETING ROOMS', '4 ROOMS'],
-    ['EARLY BIRD TICKETS', 'LIVE 17 NOV 2026'],
-  ]
-  const row = items.map(([k, v], i) => (
-    <span key={i} className="inline-flex items-center gap-2 mx-6 font-mono text-xs tracking-wider whitespace-nowrap">
-      <span className="text-brand-gray">{k}</span>
-      <TrendingUp className="w-3 h-3 text-brand-green" aria-hidden />
-      <span className="text-brand-green font-semibold">{v}</span>
-    </span>
-  ))
-  return (
-    <div className="border-y border-brand-white/10 bg-brand-ink/60 overflow-hidden py-2.5" aria-hidden>
-      <div className="ticker-track inline-flex w-max">
-        <div className="inline-flex">{row}</div>
-        <div className="inline-flex">{row}</div>
       </div>
     </div>
   )
@@ -731,7 +702,7 @@ function TicketsSection({ anim }) {
     <section id="tickets" className="py-24 bg-brand-dark relative border-b border-brand-white/10">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-14" data-anim style={anim}>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-green mb-4 uppercase">Delegate Tickets</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-yellow mb-4 uppercase">Delegate Tickets</h2>
           <p className="text-brand-gray max-w-3xl mx-auto">
             Three published price stages: <strong className="text-brand-white">Early Bird</strong>, <strong className="text-brand-white">Standard</strong> and <strong className="text-brand-white">Late</strong>.
             Early Bird pricing goes live on <strong className="text-brand-white">17 November 2026</strong>. Each stage closes on its published date or when its allocation
@@ -742,9 +713,9 @@ function TicketsSection({ anim }) {
         <div className="overflow-x-auto rounded-2xl border border-brand-white/10 mb-8" data-anim style={anim}>
           <table className="w-full text-left min-w-[640px]">
             <thead>
-              <tr className="bg-brand-ink text-[11px] uppercase tracking-widest text-brand-gray">
+              <tr className="bg-brand-dark text-[11px] uppercase tracking-widest text-brand-gray">
                 <th className="px-6 py-4 font-bold">Ticket</th>
-                <th className="px-6 py-4 font-bold text-brand-green">Early Bird</th>
+                <th className="px-6 py-4 font-bold text-brand-yellow">Early Bird</th>
                 <th className="px-6 py-4 font-bold">Standard</th>
                 <th className="px-6 py-4 font-bold">Late</th>
                 <th className="px-6 py-4 font-bold hidden md:table-cell">Access</th>
@@ -754,9 +725,9 @@ function TicketsSection({ anim }) {
               {ticketLadder.map((t) => (
                 <tr key={t.type} className="border-t border-brand-white/8 hover:bg-brand-white/[0.03] transition-colors">
                   <td className="px-6 py-4 font-bold text-brand-white whitespace-nowrap">{t.type}</td>
-                  <td className="px-6 py-4 font-mono font-semibold text-brand-green whitespace-nowrap">${t.eb.toLocaleString('en-US')}</td>
-                  <td className="px-6 py-4 font-mono text-brand-white/90 whitespace-nowrap">${t.std.toLocaleString('en-US')}</td>
-                  <td className="px-6 py-4 font-mono text-brand-white/90 whitespace-nowrap">${t.late.toLocaleString('en-US')}</td>
+                  <td className="px-6 py-4 font-semibold text-brand-yellow whitespace-nowrap">${t.eb.toLocaleString('en-US')}</td>
+                  <td className="px-6 py-4 text-brand-white/90 whitespace-nowrap">${t.std.toLocaleString('en-US')}</td>
+                  <td className="px-6 py-4 text-brand-white/90 whitespace-nowrap">${t.late.toLocaleString('en-US')}</td>
                   <td className="px-6 py-4 text-xs text-brand-gray hidden md:table-cell">{t.note}</td>
                 </tr>
               ))}
@@ -765,29 +736,29 @@ function TicketsSection({ anim }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-anim style={anim}>
-          <div className="bg-brand-ink/80 border border-brand-white/10 rounded-2xl p-6">
+          <div className="bg-brand-white/5 border border-brand-white/10 rounded-2xl p-6">
             <div className="flex items-center gap-2 mb-3">
-              <Users className="w-5 h-5 text-brand-green" aria-hidden />
+              <Users className="w-5 h-5 text-brand-yellow" aria-hidden />
               <h4 className="font-black text-brand-white uppercase text-sm tracking-wide">Team of Three</h4>
             </div>
             <p className="text-sm text-brand-gray leading-relaxed">
-              Bring your team: three Full Event passes at <strong className="text-brand-green">15% off</strong> the prevailing Full Event stage price.
+              Bring your team: three Full Event passes at <strong className="text-brand-yellow">15% off</strong> the prevailing Full Event stage price.
               Available in every stage. Not combinable with any other offer.
             </p>
           </div>
-          <div className="bg-brand-ink/80 border border-brand-white/10 rounded-2xl p-6">
+          <div className="bg-brand-white/5 border border-brand-white/10 rounded-2xl p-6">
             <div className="flex items-center gap-2 mb-3">
-              <Sparkles className="w-5 h-5 text-brand-green" aria-hidden />
+              <Sparkles className="w-5 h-5 text-brand-yellow" aria-hidden />
               <h4 className="font-black text-brand-white uppercase text-sm tracking-wide">Start-Up Pass</h4>
             </div>
             <p className="text-sm text-brand-gray leading-relaxed">
               A gated flat rate for qualifying start-ups - application-based, capped for the event and limited to one per company.
-              Apply via <a className="text-brand-green font-semibold" href="mailto:sales@next.io?subject=NEXTPredict 2027 Start-Up Pass">sales@next.io</a>.
+              Apply via <a className="text-brand-yellow font-semibold" href="mailto:sales@next.io?subject=NEXTPredict 2027 Start-Up Pass">sales@next.io</a>.
             </p>
           </div>
-          <div className="bg-brand-ink/80 border border-brand-white/10 rounded-2xl p-6">
+          <div className="bg-brand-white/5 border border-brand-white/10 rounded-2xl p-6">
             <div className="flex items-center gap-2 mb-3">
-              <Scale className="w-5 h-5 text-brand-green" aria-hidden />
+              <Scale className="w-5 h-5 text-brand-yellow" aria-hidden />
               <h4 className="font-black text-brand-white uppercase text-sm tracking-wide">Operators & Regulators</h4>
             </div>
             <p className="text-sm text-brand-gray leading-relaxed">
@@ -813,11 +784,11 @@ function CalculatorPanel({ cart, onRemove, rebooking, setRebooking, open, setOpe
   return (
     <>
       {/* Bottom bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-brand-ink/95 backdrop-blur-md border-t border-brand-green/30 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-brand-dark/95 backdrop-blur-md border-t border-brand-yellow/30 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
         <TierProgress total={total} cart={cart} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
           <div className="flex items-center gap-3 min-w-0">
-            <Calculator className="w-5 h-5 text-brand-green shrink-0" aria-hidden />
+            <Calculator className="w-5 h-5 text-brand-yellow shrink-0" aria-hidden />
             <div className="min-w-0">
               <p className="text-[10px] uppercase tracking-widest text-brand-gray font-bold">Your Selection · {cart.length} item{cart.length === 1 ? '' : 's'}</p>
               <p className="font-black text-brand-white text-lg leading-tight truncate">
@@ -827,11 +798,11 @@ function CalculatorPanel({ cart, onRemove, rebooking, setRebooking, open, setOpe
           </div>
           <div className="flex items-center gap-2 shrink-0">
             <button onClick={() => setOpen(!open)}
-              className="px-4 py-2.5 rounded-xl border border-brand-white/20 text-brand-white text-xs font-bold uppercase tracking-widest hover:border-brand-green transition-colors">
+              className="px-4 py-2.5 rounded-xl border border-brand-white/20 text-brand-white text-xs font-bold uppercase tracking-widest hover:border-brand-yellow transition-colors">
               {open ? 'Close' : 'Review'}
             </button>
             <a href={buildMailto(cart, rebooking)}
-              className="px-4 py-2.5 rounded-xl bg-brand-green text-brand-dark text-xs font-black uppercase tracking-widest hover:brightness-110 transition-all flex items-center gap-1.5">
+              className="px-4 py-2.5 rounded-xl bg-brand-yellow text-brand-dark text-xs font-black uppercase tracking-widest hover:brightness-110 transition-all flex items-center gap-1.5">
               <Mail className="w-3.5 h-3.5" aria-hidden /> Enquire
             </a>
           </div>
@@ -842,16 +813,16 @@ function CalculatorPanel({ cart, onRemove, rebooking, setRebooking, open, setOpe
       {open && (
         <div className="fixed inset-0 z-50 flex justify-end" role="dialog" aria-label="Investment calculator">
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setOpen(false)} />
-          <div className="relative w-full max-w-md bg-brand-ink border-l border-brand-white/10 h-full overflow-y-auto p-6 pb-40">
+          <div className="relative w-full max-w-md bg-brand-dark border-l border-brand-white/10 h-full overflow-y-auto p-6 pb-40">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-xl font-black text-brand-white uppercase">Investment Calculator</h3>
               <button onClick={() => setOpen(false)} className="text-brand-gray hover:text-brand-white" aria-label="Close calculator"><X className="w-6 h-6" /></button>
             </div>
             <label className="flex items-center gap-3 bg-brand-white/5 border border-brand-white/10 rounded-xl px-4 py-3 mb-6 cursor-pointer">
               <input type="checkbox" checked={rebooking} onChange={(e) => setRebooking(e.target.checked)}
-                className="w-4 h-4 accent-[#2fe08d]" />
+                className="w-4 h-4 accent-[#ffcf33]" />
               <span className="text-sm text-brand-white">
-                2026 partner rebooking rate <strong className="text-brand-green">(-15%)</strong>
+                2026 partner rebooking rate <strong className="text-brand-yellow">(-15%)</strong>
                 <span className="block text-xs text-brand-gray mt-0.5">Available to returning 2026 partners. Not combinable with other offers.</span>
               </span>
             </label>
@@ -866,7 +837,7 @@ function CalculatorPanel({ cart, onRemove, rebooking, setRebooking, open, setOpe
                       <p className="text-xs text-brand-gray mt-0.5">{item.cat}</p>
                     </div>
                     <div className="text-right shrink-0">
-                      <p className="text-sm font-black text-brand-green">{item.poa ? 'POA' : fmtPrice(rebooking ? Math.round(item.price * 0.85) : item.price)}</p>
+                      <p className="text-sm font-black text-brand-yellow">{item.poa ? 'POA' : fmtPrice(rebooking ? Math.round(item.price * 0.85) : item.price)}</p>
                       <button onClick={() => onRemove(idx)} className="text-[10px] uppercase tracking-widest text-brand-gray hover:text-red-400 font-bold mt-1">Remove</button>
                     </div>
                   </li>
@@ -876,15 +847,15 @@ function CalculatorPanel({ cart, onRemove, rebooking, setRebooking, open, setOpe
             <div className="border-t border-brand-white/10 pt-4 space-y-1 mb-6">
               <div className="flex justify-between text-sm text-brand-gray"><span>Recognition level</span><span className={`font-black uppercase ${tier.color}`}>{tier.name} Partner</span></div>
               {next && <div className="flex justify-between text-xs text-brand-gray/70"><span>Next level</span><span>{fmtPrice(next.min - total)} to {next.name}</span></div>}
-              <div className="flex justify-between text-lg font-black text-brand-white pt-2"><span>Total</span><span className="text-brand-green">{fmtPrice(total)}</span></div>
+              <div className="flex justify-between text-lg font-black text-brand-white pt-2"><span>Total</span><span className="text-brand-yellow">{fmtPrice(total)}</span></div>
             </div>
             <div className="space-y-3">
               <a href={buildMailto(cart, rebooking)}
-                className="w-full py-3.5 rounded-xl bg-brand-green text-brand-dark font-black uppercase tracking-widest text-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all">
+                className="w-full py-3.5 rounded-xl bg-brand-yellow text-brand-dark font-black uppercase tracking-widest text-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all">
                 <Mail className="w-4 h-4" aria-hidden /> Contact Sales
               </a>
               <button onClick={() => downloadProposalPDF(cart, rebooking)} disabled={!cart.length}
-                className={`w-full py-3.5 rounded-xl border font-black uppercase tracking-widest text-sm flex items-center justify-center gap-2 transition-all ${cart.length ? 'border-brand-green/50 text-brand-green hover:bg-brand-green/10' : 'border-brand-white/10 text-brand-gray cursor-not-allowed'}`}>
+                className={`w-full py-3.5 rounded-xl border font-black uppercase tracking-widest text-sm flex items-center justify-center gap-2 transition-all ${cart.length ? 'border-brand-yellow/50 text-brand-yellow hover:bg-brand-yellow/10' : 'border-brand-white/10 text-brand-gray cursor-not-allowed'}`}>
                 <Download className="w-4 h-4" aria-hidden /> Download Proposal PDF
               </button>
             </div>
@@ -943,19 +914,20 @@ export default function App() {
   ]
 
   return (
-    <div className="min-h-screen bg-brand-dark text-brand-white font-sans selection:bg-brand-green selection:text-brand-dark pb-24">
+    <div className="min-h-screen bg-brand-dark text-brand-white font-sans selection:bg-brand-yellow selection:text-brand-dark pb-24">
 
       {/* ── NAV ── */}
       <nav className="fixed top-0 left-0 w-full z-40 bg-brand-dark/95 backdrop-blur-md py-4 shadow-lg border-b border-brand-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 flex justify-between items-center gap-3">
-          <a href="#" className="block shrink-0 font-black text-xl sm:text-2xl uppercase tracking-tight">
-            NEXT<span className="text-brand-green">Predict</span> <span className="text-brand-gray font-bold">2027</span>
+          <a href="#" className="flex items-center gap-3 shrink-0">
+            <img alt="NEXTPredict" className="h-7 sm:h-9 object-contain" src={`${base}logos/nextpredict-logo.png`} />
+            <span className="font-black text-lg sm:text-2xl uppercase tracking-tight text-brand-yellow">2027</span>
           </a>
           <div className="flex items-center gap-4 sm:gap-8">
-            <a href="#pricing" className="text-sm font-bold uppercase tracking-widest text-brand-white hover:text-brand-green transition-colors hidden md:block">Rate Card</a>
-            <a href="#tickets" className="text-sm font-bold uppercase tracking-widest text-brand-white hover:text-brand-green transition-colors hidden md:block">Tickets</a>
+            <a href="#pricing" className="text-sm font-bold uppercase tracking-widest text-brand-white hover:text-brand-yellow transition-colors hidden md:block">Rate Card</a>
+            <a href="#tickets" className="text-sm font-bold uppercase tracking-widest text-brand-white hover:text-brand-yellow transition-colors hidden md:block">Tickets</a>
             <a href="mailto:sales@next.io?subject=I'm interested in NEXTPredict 2027 partnerships!"
-              className="bg-brand-green text-brand-dark px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm uppercase tracking-widest hover:bg-white transition-colors whitespace-nowrap">
+              className="bg-brand-yellow text-brand-dark px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm uppercase tracking-widest hover:bg-white transition-colors whitespace-nowrap">
               Contact Sales
             </a>
           </div>
@@ -965,35 +937,34 @@ export default function App() {
       <main>
         {/* ── HERO ── */}
         <section className="relative min-h-[86vh] flex flex-col items-center justify-center overflow-hidden bg-brand-dark pt-24">
-          <div className="absolute inset-0 z-0 grid-glow" />
-          <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,rgba(47,224,141,0.14),transparent_55%)]" />
+          <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,rgba(255,207,51,0.14),transparent_55%)]" />
           <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-brand-dark to-transparent z-0" />
           <div className="z-10 text-center max-w-5xl px-8 w-full">
-            <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-green/30 bg-brand-green/10 text-brand-green text-xs font-bold uppercase tracking-[0.2em] mb-8">
+            <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 text-brand-yellow text-xs font-bold uppercase tracking-[0.2em] mb-8">
               <TrendingUp className="w-3.5 h-3.5" aria-hidden /> The Prediction Markets Summit
             </p>
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter text-brand-white mb-6 uppercase leading-none">
-              NEXT<span className="text-brand-green">Predict</span>
+              NEXT<span className="text-brand-yellow">Predict</span>
             </h1>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-brand-green mb-6 tracking-wide uppercase">October 2027</h2>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-brand-yellow mb-6 tracking-wide uppercase">October 2027</h2>
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-brand-white/80 font-medium tracking-wide mb-10 uppercase text-sm md:text-base">
               <div className="flex items-center gap-2 bg-brand-white/5 py-2 px-4 rounded-full border border-brand-white/10">
-                <MapPin className="w-4 h-4 text-brand-green" aria-hidden /> New York City
+                <MapPin className="w-4 h-4 text-brand-yellow" aria-hidden /> New York City
               </div>
               <div className="flex items-center gap-2 bg-brand-white/5 py-2 px-4 rounded-full border border-brand-white/10">
-                <CalendarDays className="w-4 h-4 text-brand-green" aria-hidden /> Exact dates &amp; venue announced soon
+                <CalendarDays className="w-4 h-4 text-brand-yellow" aria-hidden /> Exact dates &amp; venue announced soon
               </div>
               <div className="flex items-center gap-2 bg-brand-white/5 py-2 px-4 rounded-full border border-brand-white/10">
-                <Layers className="w-4 h-4 text-brand-green" aria-hidden /> 2 Days · 3 Stages
+                <Layers className="w-4 h-4 text-brand-yellow" aria-hidden /> 2 Days · 3 Stages
               </div>
             </div>
-            <div className="bg-brand-green text-brand-dark py-4 px-6 md:py-6 md:px-12 inline-block rounded-2xl transform -skew-x-6 mb-10 max-w-full">
+            <div className="bg-brand-yellow text-brand-dark py-4 px-6 md:py-6 md:px-12 inline-block rounded-2xl transform -skew-x-6 mb-10 max-w-full">
               <h3 className="text-2xl sm:text-4xl md:text-6xl font-black uppercase tracking-tighter skew-x-6">Partnership Rate Card</h3>
             </div>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-6">
               {[['About', '#about'], ['The Room', '#audience'], ['Rate Card', '#pricing'], ['Tickets', '#tickets'], ['Recognition', '#recognition']].map(([s, href]) => (
                 <a key={s} href={href}
-                  className="text-brand-white hover:text-brand-green font-bold uppercase tracking-widest text-sm transition-colors border border-brand-white/20 hover:border-brand-green px-6 py-3 rounded-full bg-brand-dark/50 backdrop-blur-sm">
+                  className="text-brand-white hover:text-brand-yellow font-bold uppercase tracking-widest text-sm transition-colors border border-brand-white/20 hover:border-brand-yellow px-6 py-3 rounded-full bg-brand-dark/50 backdrop-blur-sm">
                   {s}
                 </a>
               ))}
@@ -1001,13 +972,12 @@ export default function App() {
           </div>
         </section>
 
-        <Ticker />
 
         {/* ── ABOUT ── */}
         <section id="about" className="py-24 bg-brand-dark relative border-b border-brand-white/10">
           <div className="max-w-7xl mx-auto px-8">
             <div data-anim style={anim}>
-              <h2 className="text-4xl md:text-5xl font-bold text-brand-green mb-2 uppercase">The Market Is Moving.</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-brand-yellow mb-2 uppercase">The Market Is Moving.</h2>
               <h3 className="text-3xl md:text-4xl font-bold text-brand-white mb-16 uppercase">Own Your Position In The Category-Defining Event</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
@@ -1018,7 +988,7 @@ export default function App() {
                   regulators and the capital behind them, in one room, for two days in New York.
                   <br /><br />
                   This is not another iGaming expo with a new banner. It is a summit built for one category,
-                  returning in October 2027 after its 2026 debut - where the <strong className="text-brand-green">Leadership Stage
+                  returning in October 2027 after its 2026 debut - where the <strong className="text-brand-yellow">Leadership Stage
                   partnership sold out</strong>.
                 </p>
               </div>
@@ -1029,8 +999,8 @@ export default function App() {
                   ['12+', 'Exhibition Positions'],
                   ['3', 'NEXTworking Evenings'],
                 ].map(([num, label], i) => (
-                  <div key={i} className="text-center px-3 py-8 rounded-xl bg-brand-white/5 border border-brand-white/10 group hover:border-brand-green/40 transition-all duration-300">
-                    <p className="text-5xl font-black text-brand-white group-hover:text-brand-green transition-colors duration-300 mb-2 leading-none font-mono">{num}</p>
+                  <div key={i} className="text-center px-3 py-8 rounded-xl bg-brand-white/5 border border-brand-white/10 group hover:border-brand-yellow/40 transition-all duration-300">
+                    <p className="text-5xl font-black text-brand-white group-hover:text-brand-yellow transition-colors duration-300 mb-2 leading-none">{num}</p>
                     <p className="text-brand-gray text-xs uppercase tracking-widest leading-snug">{label}</p>
                   </div>
                 ))}
@@ -1038,10 +1008,10 @@ export default function App() {
             </div>
 
             <div className="bg-brand-white/5 border border-brand-white/10 rounded-3xl p-10 md:p-12 relative overflow-hidden" data-anim style={anim}>
-              <div className="absolute right-0 top-0 w-96 h-96 bg-brand-green/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute right-0 top-0 w-96 h-96 bg-brand-yellow/5 rounded-full blur-3xl pointer-events-none" />
               <div className="relative z-10 max-w-3xl">
-                <div className="inline-block bg-brand-green text-brand-dark font-bold px-4 py-1 rounded-sm mb-6 text-sm">WHY PARTNER</div>
-                <h4 className="text-3xl md:text-4xl font-bold text-brand-white mb-6">First-Mover Positioning. <span className="text-brand-green">A Verified Room.</span></h4>
+                <div className="inline-block bg-brand-yellow text-brand-dark font-bold px-4 py-1 rounded-sm mb-6 text-sm">WHY PARTNER</div>
+                <h4 className="text-3xl md:text-4xl font-bold text-brand-white mb-6">First-Mover Positioning. <span className="text-brand-yellow">A Verified Room.</span></h4>
                 <p className="text-lg text-brand-gray leading-relaxed">
                   The demand side is curated on purpose: market makers and traders are hosted, and operators and
                   regulators attend on verified preferential rates - so the room your team works is the room you
@@ -1057,14 +1027,14 @@ export default function App() {
         <section id="audience" className="py-24 bg-brand-dark relative border-b border-brand-white/10">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-14" data-anim style={anim}>
-              <h2 className="text-4xl md:text-5xl font-bold text-brand-white mb-4 uppercase">Who's In <span className="text-brand-green">The Room</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-brand-white mb-4 uppercase">Who's In <span className="text-brand-yellow">The Room</span></h2>
               <p className="text-brand-gray text-lg max-w-2xl mx-auto">A summit built on category fit, not badge count - the buyers, builders and rule-makers of prediction markets.</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {audience.map(([label, Icon], i) => (
                 <div key={label} data-anim style={{ ...anim, transitionDelay: `${i * 50}ms` }}
-                  className="flex flex-col items-center gap-3 bg-brand-white/5 border border-brand-white/10 rounded-2xl px-4 py-8 hover:border-brand-green/50 hover:bg-brand-white/8 transition-all duration-300">
-                  <Icon className="w-7 h-7 text-brand-green" aria-hidden />
+                  className="flex flex-col items-center gap-3 bg-brand-white/5 border border-brand-white/10 rounded-2xl px-4 py-8 hover:border-brand-yellow/50 hover:bg-brand-white/8 transition-all duration-300">
+                  <Icon className="w-7 h-7 text-brand-yellow" aria-hidden />
                   <p className="text-sm font-bold text-brand-white text-center uppercase tracking-wide">{label}</p>
                 </div>
               ))}
@@ -1075,8 +1045,8 @@ export default function App() {
                 ['The Network', 'Three NEXTworking evenings, curated introductions, private meeting rooms and hosted hospitality - built for a market that trades on relationships.'],
                 ['The Reach', "Livestream, filmed sessions, official photography and the aftermovie extend your visibility well beyond the room, across NEXT's channels and your own."],
               ].map(([title, body]) => (
-                <div key={title} className="bg-brand-white/5 p-6 rounded-xl border border-brand-white/10 hover:border-brand-green transition-colors duration-300">
-                  <h4 className="text-brand-green font-bold mb-3 uppercase">{title}</h4>
+                <div key={title} className="bg-brand-white/5 p-6 rounded-xl border border-brand-white/10 hover:border-brand-yellow transition-colors duration-300">
+                  <h4 className="text-brand-yellow font-bold mb-3 uppercase">{title}</h4>
                   <p className="text-sm text-brand-gray leading-relaxed">{body}</p>
                 </div>
               ))}
@@ -1088,13 +1058,13 @@ export default function App() {
         <section id="pricing" className="py-24 bg-brand-dark relative">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-10" data-anim style={anim}>
-              <h2 className="text-4xl md:text-5xl font-bold text-brand-green mb-4 uppercase">Partnership Rate Card</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-brand-yellow mb-4 uppercase">Partnership Rate Card</h2>
               <p className="text-brand-gray max-w-3xl mx-auto">
                 Published pricing, all-in where stated. Exclusive and shared routes over the same inventory are
                 alternatives - the calculator enforces it. Prices in EUR and exclude VAT.
               </p>
               <button onClick={downloadRateCardPDF}
-                className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full border border-brand-green/50 text-brand-green font-bold text-sm uppercase tracking-widest hover:bg-brand-green/10 transition-colors">
+                className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full border border-brand-yellow/50 text-brand-yellow font-bold text-sm uppercase tracking-widest hover:bg-brand-yellow/10 transition-colors">
                 <Download className="w-4 h-4" aria-hidden /> Download Full Rate Card
               </button>
             </div>
@@ -1105,7 +1075,7 @@ export default function App() {
                 <span className="text-[10px] uppercase tracking-widest text-brand-gray font-bold mr-1">Objective:</span>
                 {impacts.map((f) => (
                   <button key={f} onClick={() => setActiveImpact(activeImpact === f ? null : f)}
-                    className={`px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border transition-all ${activeImpact === f ? 'bg-brand-green text-brand-dark border-brand-green' : 'border-brand-white/20 text-brand-gray hover:border-brand-green/60 hover:text-brand-white'}`}>
+                    className={`px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border transition-all ${activeImpact === f ? 'bg-brand-yellow text-brand-dark border-brand-yellow' : 'border-brand-white/20 text-brand-gray hover:border-brand-yellow/60 hover:text-brand-white'}`}>
                     {f}
                   </button>
                 ))}
@@ -1114,7 +1084,7 @@ export default function App() {
                 <span className="text-[10px] uppercase tracking-widest text-brand-gray font-bold mr-1">Format:</span>
                 {types.map((f) => (
                   <button key={f} onClick={() => setActiveType(activeType === f ? null : f)}
-                    className={`px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border transition-all ${activeType === f ? 'bg-brand-green text-brand-dark border-brand-green' : 'border-brand-white/20 text-brand-gray hover:border-brand-green/60 hover:text-brand-white'}`}>
+                    className={`px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border transition-all ${activeType === f ? 'bg-brand-yellow text-brand-dark border-brand-yellow' : 'border-brand-white/20 text-brand-gray hover:border-brand-yellow/60 hover:text-brand-white'}`}>
                     {f}
                   </button>
                 ))}
@@ -1126,8 +1096,8 @@ export default function App() {
               <div key={cat} className="mb-16">
                 <div className="flex items-center gap-4 mb-8" data-anim style={anim}>
                   <h3 className="text-2xl md:text-3xl font-black text-brand-white uppercase whitespace-nowrap">{cat}</h3>
-                  <div className="h-px bg-brand-green/30 flex-1" />
-                  <span className="text-xs text-brand-gray font-mono">{items.length} product{items.length === 1 ? '' : 's'}</span>
+                  <div className="h-px bg-brand-yellow/30 flex-1" />
+                  <span className="text-xs text-brand-gray">{items.length} product{items.length === 1 ? '' : 's'}</span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {items.map((item) =>
@@ -1142,10 +1112,10 @@ export default function App() {
         </section>
 
         {/* ── RECOGNITION LEVELS ── */}
-        <section id="recognition" className="py-24 bg-brand-ink/50 relative border-y border-brand-white/10">
+        <section id="recognition" className="py-24 bg-brand-white/[0.03] relative border-y border-brand-white/10">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-14" data-anim style={anim}>
-              <h2 className="text-4xl md:text-5xl font-bold text-brand-white mb-4 uppercase">Partner <span className="text-brand-green">Recognition</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-brand-white mb-4 uppercase">Partner <span className="text-brand-yellow">Recognition</span></h2>
               <p className="text-brand-gray max-w-3xl mx-auto">
                 Recognition is earned on your combined total spend across all NEXTPredict 2027 products.
                 It carries no extra charge and adds no further products - it is how prominently the event says thank you.
@@ -1156,13 +1126,13 @@ export default function App() {
                 ['Silver', 'Up to €30k', 'text-brand-gray', 'Silver position and logo recognition across agreed listings, website and onsite displays.'],
                 ['Gold', '€30k – €79,999', 'text-yellow-400', 'Gold position and logo recognition across agreed listings, website and onsite displays.'],
                 ['Platinum', '€80k – €134,999', 'text-blue-300', 'Platinum position and logo recognition across agreed listings, website and onsite displays.'],
-                ['Diamond', '€135k+', 'text-brand-green', 'Diamond position and logo recognition across agreed listings, website and onsite displays.'],
-                ['Headline', 'Headline product', 'text-brand-green', 'The highest position in the partner hierarchy - reserved for the Headline Partner. Not reachable by spend alone.'],
+                ['Diamond', '€135k+', 'text-brand-yellow', 'Diamond position and logo recognition across agreed listings, website and onsite displays.'],
+                ['Headline', 'Headline product', 'text-brand-yellow', 'The highest position in the partner hierarchy - reserved for the Headline Partner. Not reachable by spend alone.'],
               ].map(([name, band, color, desc], i) => (
                 <div key={name} data-anim style={{ ...anim, transitionDelay: `${i * 60}ms` }}
-                  className={`rounded-2xl border p-6 flex flex-col ${name === 'Headline' ? 'border-brand-green/60 bg-brand-green/8' : 'border-brand-white/10 bg-brand-white/5'}`}>
+                  className={`rounded-2xl border p-6 flex flex-col ${name === 'Headline' ? 'border-brand-yellow/60 bg-brand-yellow/8' : 'border-brand-white/10 bg-brand-white/5'}`}>
                   <p className={`text-xl font-black uppercase mb-1 ${color}`}>{name}</p>
-                  <p className="text-xs font-mono text-brand-gray mb-4">{band}</p>
+                  <p className="text-xs text-brand-gray mb-4">{band}</p>
                   <p className="text-xs text-brand-gray leading-relaxed">{desc}</p>
                 </div>
               ))}
@@ -1179,10 +1149,10 @@ export default function App() {
         {/* ── REBOOKING / CTA ── */}
         <section className="py-24 bg-brand-dark relative">
           <div className="max-w-5xl mx-auto px-8 text-center" data-anim style={anim}>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-green/10 border border-brand-green/20 rounded-full text-brand-green text-xs font-bold tracking-widest uppercase mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-yellow/10 border border-brand-yellow/20 rounded-full text-brand-yellow text-xs font-bold tracking-widest uppercase mb-8">
               <ShieldCheck className="w-3.5 h-3.5" aria-hidden /><span>2026 Partners</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-brand-white uppercase mb-6">Rebook Early. <span className="text-brand-green">Keep 15%.</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black text-brand-white uppercase mb-6">Rebook Early. <span className="text-brand-yellow">Keep 15%.</span></h2>
             <p className="text-lg text-brand-gray max-w-3xl mx-auto mb-10">
               Partners from NEXTPredict 2026 qualify for a 15% rebooking rate on 2027 packages, with first
               conversation on the exclusive inventory they held. The rebooking rate is not combinable with any
@@ -1190,11 +1160,11 @@ export default function App() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="mailto:sales@next.io?subject=NEXTPredict 2027 rebooking"
-                className="bg-brand-green text-brand-dark px-8 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:bg-white transition-colors inline-flex items-center gap-2">
+                className="bg-brand-yellow text-brand-dark px-8 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:bg-white transition-colors inline-flex items-center gap-2">
                 <Mail className="w-4 h-4" aria-hidden /> Talk To Partnerships
               </a>
               <button onClick={downloadRateCardPDF}
-                className="border border-brand-white/20 text-brand-white px-8 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:border-brand-green hover:text-brand-green transition-colors inline-flex items-center gap-2">
+                className="border border-brand-white/20 text-brand-white px-8 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:border-brand-yellow hover:text-brand-yellow transition-colors inline-flex items-center gap-2">
                 <Download className="w-4 h-4" aria-hidden /> Full Rate Card PDF
               </button>
             </div>
@@ -1203,16 +1173,16 @@ export default function App() {
       </main>
 
       {/* ── FOOTER ── */}
-      <footer className="border-t border-brand-white/10 py-14 bg-brand-ink/60">
+      <footer className="border-t border-brand-white/10 py-14 bg-brand-white/[0.03]">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between gap-8">
           <div>
-            <p className="font-black text-2xl uppercase tracking-tight mb-2">NEXT<span className="text-brand-green">Predict</span> 2027</p>
+            <p className="font-black text-2xl uppercase tracking-tight mb-2">NEXT<span className="text-brand-yellow">Predict</span> 2027</p>
             <p className="text-brand-gray text-sm">The Prediction Markets Summit · October 2027 · New York City</p>
             <p className="text-brand-gray/60 text-xs mt-1">Exact dates and venue to be announced.</p>
           </div>
           <div className="text-sm text-brand-gray space-y-2 md:text-right">
-            <p><a href="mailto:sales@next.io" className="hover:text-brand-green transition-colors font-semibold">sales@next.io</a></p>
-            <p><a href="https://next.io" target="_blank" rel="noreferrer" className="hover:text-brand-green transition-colors">next.io</a></p>
+            <p><a href="mailto:sales@next.io" className="hover:text-brand-yellow transition-colors font-semibold">sales@next.io</a></p>
+            <p><a href="https://next.io" target="_blank" rel="noreferrer" className="hover:text-brand-yellow transition-colors">next.io</a></p>
             <p className="text-xs text-brand-gray/60 max-w-md md:ml-auto">
               All prices exclude VAT. Availability subject to change without notice. Exclusive and shared routes
               over the same inventory are alternatives, never sold together. Ticket prices in USD; partnership
