@@ -507,11 +507,11 @@ const types = [...new Set(pricing.flatMap((p) => p.type))]
 
 // ─── Ticket ladder (public rates, USD) ──────────────────────────────────────
 const ticketLadder = [
-  { type: 'VIP', eb: 2199, std: 2999, late: 3399, note: 'Premium all-event access with first-priority networking.' },
-  { type: 'Full Event', eb: 1299, std: 1799, late: 2099, note: 'The core pass: full programme plus the main networking events.' },
-  { type: 'Conference Only', eb: 949, std: 1249, late: 1449, note: 'Both conference days, without the evening networking programme.' },
-  { type: 'Day Pass', eb: 779, std: 1079, late: 1259, note: 'One event day of your choice, including that evening’s event.' },
-  { type: 'Operator & Regulator', eb: 650, std: 900, late: 1050, note: 'Verified operators and regulators. Verification required at checkout.' },
+  { type: 'VIP', eb: 2599, std: 2999, late: 3399, note: 'Premium all-event access with first-priority networking.' },
+  { type: 'Full Event', eb: 1499, std: 1799, late: 2099, note: 'The core pass: full programme plus the main networking events.' },
+  { type: 'Conference Only', eb: 1099, std: 1249, late: 1449, note: 'Both conference days, without the evening networking programme.' },
+  { type: 'Day Pass', eb: 899, std: 1079, late: 1259, note: 'One event day of your choice, including that evening’s event.' },
+  { type: 'Operator & Regulator', eb: 750, std: 900, late: 1050, note: 'Verified operators and regulators. Verification required at checkout.' },
 ]
 
 // ─── Tier Progress bar ──────────────────────────────────────────────────────
