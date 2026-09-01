@@ -371,27 +371,27 @@ const pricing = [
   // Exhibition & Start-Up Zone
   { id: 31, cat: 'Exhibition & Start-Up Zone', title: 'Exhibition Stand 6x8, Gallery Showcase', price: 60000, exclusive: true, avail: null,
     quote: '"The largest showcase position on the floor: a 6x8 gallery landmark for a brand that wants to anchor the exhibition."',
-    bullets: 'Premium 6x8 landmark position in the gallery\nBuild route or space-only route, agreed at contract\nWebsite and floorplan listing\nSignage and furniture/power package on the build route\nLead-capture eligibility, subject to registration and data setup\n📅 One position available.',
+    bullets: 'Premium 6x8 landmark position in the gallery\nBuild route or space-only route, agreed at contract\nWebsite and floorplan listing\nSignage and furniture/power package on the build route\nLead-capture eligibility, subject to registration and data setup\nIndividual pre-event welcome post on social media\nLogo on the partners section of the website\nLogo within the event guide\nMention in the post-event aftermovie\n4 Full Event passes\n📅 One position available.',
     impact: ['Lead Generation', 'Brand Awareness'], type: ['Exhibition'] },
   { id: 32, cat: 'Exhibition & Start-Up Zone', title: 'Exhibition Stand 8x4, Planner Area Showcase', price: 50000, exclusive: true, avail: null,
     quote: '"An 8x4 showcase in the planner area - a landmark footprint where delegates plan their day and the traffic concentrates."',
-    bullets: 'Premium 8x4 position in the planner area\nBuild route or space-only route, agreed at contract\nWebsite and floorplan listing\nSignage and furniture/power package on the build route\nLead-capture eligibility, subject to registration and data setup\n📅 One position available.',
+    bullets: 'Premium 8x4 position in the planner area\nBuild route or space-only route, agreed at contract\nWebsite and floorplan listing\nSignage and furniture/power package on the build route\nLead-capture eligibility, subject to registration and data setup\nIndividual pre-event welcome post on social media\nLogo on the partners section of the website\nLogo within the event guide\nMention in the post-event aftermovie\n4 Full Event passes\n📅 One position available.',
     impact: ['Lead Generation', 'Brand Awareness'], type: ['Exhibition'] },
   { id: 33, cat: 'Exhibition & Start-Up Zone', title: 'Exhibition Stand 6x4, Premium Gallery Position', price: 40000, exclusive: true, avail: null,
     quote: '"A top-position 6x4 physical showcase with premium gallery visibility."',
-    bullets: 'Premium 6x4 gallery position with top visibility\nTurnkey format: furniture and power package included\nWebsite and floorplan listing\nAgreed signage package\nLead-capture eligibility, subject to registration and data setup\n📅 One position available.',
+    bullets: 'Premium 6x4 gallery position with top visibility\nTurnkey format: furniture and power package included\nWebsite and floorplan listing\nAgreed signage package\nLead-capture eligibility, subject to registration and data setup\nIndividual pre-event welcome post on social media\nLogo on the partners section of the website\nLogo within the event guide\nMention in the post-event aftermovie\n4 Full Event passes\n📅 One position available.',
     impact: ['Lead Generation', 'Brand Awareness'], type: ['Exhibition'] },
   { id: 34, cat: 'Exhibition & Start-Up Zone', title: 'Exhibition Stand 3x2, Turnkey', price: 20000, exclusive: false, avail: 12,
     quote: '"The core exhibition product: a turnkey 3x2 branded footprint on the floor where the market does its walking."',
-    bullets: 'Branded 3x2 physical footprint\nTurnkey format: standard furniture and power package included\nWebsite and floorplan listing\nAgreed signage package\nLead-capture eligibility, subject to registration and data setup\n📅 Twelve positions available. Two adjacent stands can be combined into a 6x2 footprint.',
+    bullets: 'Branded 3x2 physical footprint\nTurnkey format: standard furniture and power package included\nWebsite and floorplan listing\nAgreed signage package\nLead-capture eligibility, subject to registration and data setup\nLogo on the partners section of the website\nLogo within the event guide\nMention in the post-event aftermovie\n2 Full Event passes\n📅 Twelve positions available. Two adjacent stands can be combined into a 6x2 footprint.',
     impact: ['Lead Generation', 'Brand Awareness'], type: ['Exhibition'] },
   { id: 35, cat: 'Exhibition & Start-Up Zone', title: 'Start-Up Activation, Double Stand', price: 16000, exclusive: false, avail: 4,
     quote: '"A double activation position in the shared start-up zone - room to demo, priced for builders."',
-    bullets: 'Double activation position in the shared start-up zone\nWebsite and floorplan listing\nAgreed signage package\nLead-capture eligibility, subject to registration and data setup\n📅 Four positions available.',
+    bullets: 'Double activation position in the shared start-up zone\nWebsite and floorplan listing\nAgreed signage package\nLead-capture eligibility, subject to registration and data setup\nLogo on the partners section of the website\nLogo within the event guide\nMention in the post-event aftermovie\n2 Full Event passes\n📅 Four positions available.',
     impact: ['Lead Generation'], type: ['Exhibition'] },
   { id: 36, cat: 'Exhibition & Start-Up Zone', title: 'Start-Up Activation, Single Stand', price: 9500, exclusive: false, avail: 8,
     quote: '"The most accessible physical presence at the event: a single activation position in the shared start-up zone."',
-    bullets: 'Single activation position in the shared start-up zone\nWebsite and floorplan listing\nAgreed signage package\nLead-capture eligibility, subject to registration and data setup\n📅 Eight positions available.',
+    bullets: 'Single activation position in the shared start-up zone\nWebsite and floorplan listing\nAgreed signage package\nLead-capture eligibility, subject to registration and data setup\nLogo on the partners section of the website\nLogo within the event guide\nMention in the post-event aftermovie\n1 Full Event pass\n📅 Eight positions available.',
     impact: ['Lead Generation'], type: ['Exhibition'] },
 
   // Private Meeting Rooms
@@ -419,7 +419,7 @@ const pricing = [
     impact: ['Brand Awareness', 'Deal Flow'], type: ['Networking & Hospitality', 'Branding & Visibility'] },
   { id: 42, cat: 'Hospitality & Lounges', title: 'Gallery Nourish Bars, Exclusive (All Three)', price: 75000, exclusive: true, avail: null,
     quote: '"Every coffee, every refuel, your brand: exclusive ownership of all three gallery Nourish Bars, with branded cups and the projector wall."',
-    bullets: 'Exclusive branding across all three gallery Nourish Bars\nBranded cups across the catering points\nProjector wall branding\nSummit-wide general branding\nWebsite, social and aftermovie visibility\n⚠️ Either/or route with the three individual Nourish Bar sponsorships - never sold together.',
+    bullets: 'Exclusive branding across all three gallery Nourish Bars\nBranded cups across the catering points\nProjector wall branding\nSummit-wide general branding\nWebsite, social and aftermovie visibility\n4 Full Event passes\n⚠️ Either/or route with the three individual Nourish Bar sponsorships - never sold together.',
     impact: ['Brand Awareness'], type: ['Networking & Hospitality', 'Branding & Visibility'] },
   { id: 43, cat: 'Hospitality & Lounges', title: 'Nourish Bar Sponsor', price: 28500, exclusive: false, avail: 3,
     quote: '"High-frequency hospitality branding: one of the three gallery Nourish Bars, where every delegate returns several times a day."',
@@ -441,7 +441,7 @@ const pricing = [
     impact: ['Brand Awareness', 'Thought Leadership'], type: ['Media'] },
   { id: 47, cat: 'Media & Content', title: 'Press Lounge Sponsor', price: 22000, exclusive: true, avail: null,
     quote: '"Host the press. Exclusive branding of the press lounge puts your name in front of every journalist covering the event."',
-    bullets: 'Exclusive press lounge branding across both event days\nHosted presence in front of attending media\nSummit-wide general branding\nWebsite, social and aftermovie visibility',
+    bullets: 'Exclusive press lounge branding across both event days\nHosted presence in front of attending media\nSummit-wide general branding\nWebsite, social and aftermovie visibility\n2 Full Event passes',
     impact: ['Brand Awareness'], type: ['Media'] },
   { id: 48, cat: 'Media & Content', title: 'Advertisement Video', price: 13500, exclusive: false, avail: 8,
     quote: '"Thirty seconds in front of the whole room: your video in conference breaks and on the gallery video wall."',
@@ -461,7 +461,7 @@ const pricing = [
     quote: '"Fifteen stair risers behind registration, plus an LCD video position - branding every delegate climbs past all day."',
     bullets: 'Branding across 15 stair risers behind registration\nLCD video advertisement\nSummit-wide general branding\n2 Full Event passes',
     impact: ['Brand Awareness'], type: ['Branding & Visibility'] },
-  { id: 52, cat: 'Venue Branding', title: 'Badge Sponsor', price: 30800, exclusive: true, avail: null,
+  { id: 52, cat: 'Venue Branding', title: 'Badge Sponsor', price: 32000, exclusive: true, avail: null,
     quote: '"On every delegate, in every conversation, in every photo: your logo on all event badges."',
     bullets: 'Logo on all delegate badges\nSummit-wide general branding\nWebsite and shared social visibility\nCredited in the official aftermovie\n2 Full Event passes',
     impact: ['Brand Awareness'], type: ['Branding & Visibility'] },
@@ -1016,7 +1016,7 @@ export default function App() {
                   The demand side is curated on purpose: market makers and traders are hosted, and operators and
                   regulators attend on verified preferential rates - so the room your team works is the room you
                   are paying to meet. Partner visibility runs across the venue, the livestream, NEXT's digital
-                  reach (~40k LinkedIn followers, ~30k newsletter subscribers) and the official aftermovie.
+                  reach (a ~40k LinkedIn following and the daily newsletter database) and the official aftermovie.
                 </p>
               </div>
             </div>
