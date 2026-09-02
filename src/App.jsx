@@ -1095,7 +1095,7 @@ export default function App() {
             {filteredByCategory.map(({ cat, items }) => (
               <div key={cat} className="mb-16">
                 <div className="flex items-center gap-4 mb-8" data-anim style={anim}>
-                  <h3 className="text-2xl md:text-3xl font-black text-brand-white uppercase whitespace-nowrap">{cat}</h3>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-brand-white uppercase">{cat.replace(/-/g, '\u2011')}</h3>
                   <div className="h-px bg-brand-yellow/30 flex-1" />
                   <span className="text-xs text-brand-gray">{items.length} product{items.length === 1 ? '' : 's'}</span>
                 </div>
