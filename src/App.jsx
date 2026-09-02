@@ -17,7 +17,7 @@ const TIERS = [
   { name: 'Silver',   min: 0,      color: 'text-brand-gray' },
   { name: 'Gold',     min: 30000,  color: 'text-yellow-400' },
   { name: 'Platinum', min: 80000,  color: 'text-blue-300' },
-  { name: 'Diamond',  min: 135000, color: 'text-brand-yellow' },
+  { name: 'Diamond',  min: 135000, color: 'text-cyan-100' },
 ]
 const HEADLINE_TIER = { name: 'Headline', min: null, color: 'text-brand-yellow' }
 const HEADLINE_PRODUCT_IDS = [1] // "Headline Partner"
@@ -60,7 +60,7 @@ function downloadProposalPDF(cart, rebooking) {
   const total = cart.reduce((s, i) => s + (i.poa ? 0 : (rebooking ? Math.round(i.price * 0.85) : i.price)), 0)
   const tier = resolveTier(total, cart)
   const nextTier = nextSpendTier(total, cart)
-  const tierColors = { Silver: '#9ca3af', Gold: '#f59e0b', Platinum: '#93c5fd', Diamond: '#ffcf33', Headline: '#ffcf33' }
+  const tierColors = { Silver: '#9ca3af', Gold: '#f59e0b', Platinum: '#93c5fd', Diamond: '#cffafe', Headline: '#ffcf33' }
   const tierColor = tierColors[tier.name] || '#ffcf33'
   const rows = cart.map((item) => {
     const p = rebooking ? Math.round(item.price * 0.85) : item.price
@@ -1126,7 +1126,7 @@ export default function App() {
                 ['Silver', 'Up to €30k', 'text-brand-gray', 'Silver position and logo recognition across agreed listings, website and onsite displays.'],
                 ['Gold', '€30k – €79,999', 'text-yellow-400', 'Gold position and logo recognition across agreed listings, website and onsite displays.'],
                 ['Platinum', '€80k – €134,999', 'text-blue-300', 'Platinum position and logo recognition across agreed listings, website and onsite displays.'],
-                ['Diamond', '€135k+', 'text-brand-yellow', 'Diamond position and logo recognition across agreed listings, website and onsite displays.'],
+                ['Diamond', '€135k+', 'text-cyan-100', 'Diamond position and logo recognition across agreed listings, website and onsite displays.'],
                 ['Headline', 'Headline product', 'text-brand-yellow', 'The highest position in the partner hierarchy - reserved for the Headline Partner. Not reachable by spend alone.'],
               ].map(([name, band, color, desc], i) => (
                 <div key={name} data-anim style={{ ...anim, transitionDelay: `${i * 60}ms` }}
