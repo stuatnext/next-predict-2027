@@ -298,7 +298,7 @@ Branded merchandise moment at the event
 General summit branding across the event
 Credited in the official aftermovie
 4 Full Event passes
-⚠️ Either/or route: if the exclusive partnership sells, the shared pre-registration route is withdrawn.`,impact:["Brand Awareness","Deal Flow"],type:["Networking & Hospitality"]},{id:5,cat:"NEXTworking Evening Events",title:"Day 1 NEXTworking, Non-Exclusive Partner",price:34e3,exclusive:!1,avail:5,quote:'"A shared route into the Day 1 evening: co-branding across the biggest networking night without the exclusive commitment."',bullets:`Shared partner branding at the Day 1 NEXTworking evening event
+⚠️ Either/or route: if the exclusive partnership sells, the shared pre-registration route is withdrawn.`,impact:["Brand Awareness","Deal Flow"],type:["Networking & Hospitality"]},{id:5,cat:"NEXTworking Evening Events",title:"Day 1 NEXTworking, Non-Exclusive Partner",price:38e3,exclusive:!1,avail:5,quote:'"A shared route into the Day 1 evening: co-branding across the biggest networking night without the exclusive commitment."',bullets:`Shared partner branding at the Day 1 NEXTworking evening event
 Event video branding and brand-watermarked official photography
 Branded merchandise moment at the event
 General summit branding
@@ -331,7 +331,7 @@ Full AV and production support
 25-30 minute moderated discussion or fireside format
 "Presented by" session title on agenda, website and screens
 1 Full Event pass + 2 Speaker passes
-📅 One slot per day, subject to content approval.`,impact:["Thought Leadership"],type:["Speaking & Content"]},{id:14,cat:"Leadership Stage",title:"Leadership Stage Chair Partner",price:4e4,exclusive:!0,avail:null,quote:'"Every seat in the main conference room, both days. Chair branding puts your logo in every audience shot of the headline programme."',bullets:`Branding on all seats in the main conference hall on both event days
+📅 One slot per day, subject to content approval.`,impact:["Thought Leadership"],type:["Speaking & Content"]},{id:14,cat:"Leadership Stage",title:"Leadership Stage Chair Partner",price:45e3,exclusive:!0,avail:null,quote:'"Every seat in the main conference room, both days. Chair branding puts your logo in every audience shot of the headline programme."',bullets:`Branding on all seats in the main conference hall on both event days
 Summit-wide general branding
 Website, social and aftermovie visibility
 2 Full Event passes`,impact:["Brand Awareness"],type:["Branding & Visibility"]},{id:15,cat:"Leadership Stage",title:"Leadership Stage Branded Session",price:3e4,exclusive:!1,avail:4,quote:`"A 'Powered by' session on the main stage: 25-30 minutes of your expertise, with your C-level speaker, in front of the whole event."`,bullets:`"Powered by" session, 25-30 minutes
@@ -343,21 +343,21 @@ Session branding on agenda, website and screens
 No brand attribution on the session - editorial format
 Partner logo on the website
 1 Speaker pass
-📅 Programme-controlled inventory.`,impact:["Thought Leadership"],type:["Speaking & Content"]},{id:17,cat:"Stage 2 Hub",title:"Stage 2 Partner (Both-Days Exclusive)",price:105e3,exclusive:!0,avail:null,quote:'"The second stage as your event-long hub: backdrop, chairs, a custom panel and a two-day branded presence the market walks through all event."',bullets:`Event-long exclusive Stage 2 hub across both days
+📅 Programme-controlled inventory.`,impact:["Thought Leadership"],type:["Speaking & Content"]},{id:17,cat:"Stage 2 Hub",title:"Stage 2 Partner (Both-Days Exclusive)",price:115e3,exclusive:!0,avail:null,quote:'"The second stage as your event-long hub: backdrop, chairs, a custom panel and a two-day branded presence the market walks through all event."',bullets:`Event-long exclusive Stage 2 hub across both days
 Backdrop branding around the two stage screens
 Delegate-chair branding
 1 Custom Panel session included
 Full two-day hub presence
 Website, social and aftermovie visibility
 3 Full Event passes + 1 Speaker pass
-⚠️ Either/or route with the two per-day Stage 2 partnerships - never sold together.`,impact:["Brand Awareness","Thought Leadership"],type:["Speaking & Content","Branding & Visibility"]},{id:18,cat:"Stage 2 Hub",title:"Stage 2 Partner (Per Day)",price:6e4,exclusive:!1,avail:2,quote:'"Own the second stage for a full day: backdrop, chair branding, a custom panel and a one-day hub presence built around your brand."',bullets:`Stage 2 backdrop branding around the two stage screens
+⚠️ Either/or route with the two per-day Stage 2 partnerships - never sold together.`,impact:["Brand Awareness","Thought Leadership"],type:["Speaking & Content","Branding & Visibility"]},{id:18,cat:"Stage 2 Hub",title:"Stage 2 Partner (Per Day)",price:65e3,exclusive:!1,avail:2,quote:'"Own the second stage for a full day: backdrop, chair branding, a custom panel and a one-day hub presence built around your brand."',bullets:`Stage 2 backdrop branding around the two stage screens
 Delegate-chair branding
 1 Custom Panel session included
 Full one-day hub presence
 Website, social and aftermovie visibility
 3 Full Event passes + 1 Speaker pass
 📅 One Day 1 and one Day 2 partnership available.
-⚠️ Either/or route with the both-days exclusive - never sold together.`,impact:["Brand Awareness","Thought Leadership"],type:["Speaking & Content","Branding & Visibility"]},{id:19,cat:"Stage 2 Hub",title:"Stage 2 Presenter",price:52e3,exclusive:!1,avail:2,quote:'"A 20-minute C-level keynote on Stage 2, presented by your brand, with full production support."',bullets:`20-minute C-level keynote
+⚠️ Either/or route with the both-days exclusive - never sold together.`,impact:["Brand Awareness","Thought Leadership"],type:["Speaking & Content","Branding & Visibility"]},{id:19,cat:"Stage 2 Hub",title:"Stage 2 Presenter",price:55e3,exclusive:!1,avail:2,quote:'"A 20-minute C-level keynote on Stage 2, presented by your brand, with full production support."',bullets:`20-minute C-level keynote
 Full AV and production support
 "Presented by" session title on agenda and website
 2 Full Event passes + 1 Speaker pass
@@ -373,7 +373,7 @@ Session branding on agenda, website and screens
 C-level participation, no brand attribution
 Partner logo on the website
 1 Speaker pass
-📅 Programme-controlled inventory.`,impact:["Thought Leadership"],type:["Speaking & Content"]},{id:23,cat:"Stage 3 Hub",title:"Stage 3 Partner (Both-Days Exclusive)",price:48e3,exclusive:!0,avail:null,quote:'"An event-long hub on the third stage: branding, chairs, a custom panel and two days of owned presence at the most accessible partner price on a stage."',bullets:`Event-long exclusive Stage 3 hub across both days
+📅 Programme-controlled inventory.`,impact:["Thought Leadership"],type:["Speaking & Content"]},{id:23,cat:"Stage 3 Hub",title:"Stage 3 Partner (Both-Days Exclusive)",price:6e4,exclusive:!0,avail:null,quote:'"An event-long hub on the third stage: branding, chairs, a custom panel and two days of owned presence at the most accessible partner price on a stage."',bullets:`Event-long exclusive Stage 3 hub across both days
 Branding on stage returns and content-screen surrounds
 Chair branding and branded holding slide
 1 Custom Panel session included
@@ -410,7 +410,7 @@ Website, social and aftermovie visibility
 ⚠️ Invitations are facilitated on an opt-in basis - attendance is not guaranteed.`,impact:["Deal Flow","Lead Generation","Thought Leadership"],type:["Speaking & Content","Networking & Hospitality"]},{id:30,cat:"Workshops & Curated Networking",title:"Curated Introduction Package",price:15e3,exclusive:!1,avail:3,quote:'"Five introductions that matter more than fifty scans. We brief on your targets, match against the room and facilitate opt-in introductions with an outcome summary."',bullets:`Partner brief and target-account matching
 Five facilitated opt-in introductions
 Outcome summary after the event
-⚠️ Introductions are opt-in and subject to mutual approval.`,impact:["Deal Flow","Lead Generation"],type:["Networking & Hospitality"]},{id:31,cat:"Exhibition & Start-Up Zone",title:"Exhibition Stand 6x8, Gallery Showcase",price:12e4,exclusive:!0,avail:null,quote:'"The largest showcase position on the floor: a 6x8 gallery landmark for a brand that wants to anchor the exhibition."',bullets:`Premium 6x8 landmark position in the gallery
+⚠️ Introductions are opt-in and subject to mutual approval.`,impact:["Deal Flow","Lead Generation"],type:["Networking & Hospitality"]},{id:31,cat:"Exhibition & Start-Up Zone",title:"Exhibition Stand 6x8, Gallery Showcase",price:135e3,exclusive:!0,avail:null,quote:'"The largest showcase position on the floor: a 6x8 gallery landmark for a brand that wants to anchor the exhibition."',bullets:`Premium 6x8 landmark position in the gallery
 Build route or space-only route, agreed at contract
 Website and floorplan listing
 Signage and furniture/power package on the build route
@@ -420,7 +420,7 @@ Logo on the partners section of the website
 Logo within the event guide
 Mention in the post-event aftermovie
 4 Full Event passes
-📅 One position available.`,impact:["Lead Generation","Brand Awareness"],type:["Exhibition"]},{id:32,cat:"Exhibition & Start-Up Zone",title:"Exhibition Stand 8x4, Planner Area Showcase",price:1e5,exclusive:!0,avail:null,quote:'"An 8x4 showcase in the planner area - a landmark footprint where delegates plan their day and the traffic concentrates."',bullets:`Premium 8x4 position in the delegate planning zone
+📅 One position available.`,impact:["Lead Generation","Brand Awareness"],type:["Exhibition"]},{id:32,cat:"Exhibition & Start-Up Zone",title:"Exhibition Stand 8x4, Planner Area Showcase",price:11e4,exclusive:!0,avail:null,quote:'"An 8x4 showcase in the planner area - a landmark footprint where delegates plan their day and the traffic concentrates."',bullets:`Premium 8x4 position in the delegate planning zone
 ⚠️ Quantities and positions reflect the reference venue layout - final spec confirmed when the venue is announced
 Build route or space-only route, agreed at contract
 Website and floorplan listing
@@ -431,7 +431,7 @@ Logo on the partners section of the website
 Logo within the event guide
 Mention in the post-event aftermovie
 4 Full Event passes
-📅 One position available.`,impact:["Lead Generation","Brand Awareness"],type:["Exhibition"]},{id:33,cat:"Exhibition & Start-Up Zone",title:"Exhibition Stand 6x4, Premium Gallery Position",price:7e4,exclusive:!0,avail:null,quote:'"A top-position 6x4 physical showcase with premium gallery visibility."',bullets:`Premium 6x4 gallery position with top visibility
+📅 One position available.`,impact:["Lead Generation","Brand Awareness"],type:["Exhibition"]},{id:33,cat:"Exhibition & Start-Up Zone",title:"Exhibition Stand 6x4, Premium Gallery Position",price:75e3,exclusive:!0,avail:null,quote:'"A top-position 6x4 physical showcase with premium gallery visibility."',bullets:`Premium 6x4 gallery position with top visibility
 Turnkey format: furniture and power package included
 Website and floorplan listing
 Agreed signage package
@@ -441,7 +441,7 @@ Logo on the partners section of the website
 Logo within the event guide
 Mention in the post-event aftermovie
 4 Full Event passes
-📅 One position available.`,impact:["Lead Generation","Brand Awareness"],type:["Exhibition"]},{id:34,cat:"Exhibition & Start-Up Zone",title:"Exhibition Stand 3x2, Turnkey",price:3e4,exclusive:!1,avail:12,quote:'"The core exhibition product: a turnkey 3x2 branded footprint on the floor where the market does its walking."',bullets:`Branded 3x2 physical footprint
+📅 One position available.`,impact:["Lead Generation","Brand Awareness"],type:["Exhibition"]},{id:34,cat:"Exhibition & Start-Up Zone",title:"Exhibition Stand 3x2, Turnkey",price:33e3,exclusive:!1,avail:12,quote:'"The core exhibition product: a turnkey 3x2 branded footprint on the floor where the market does its walking."',bullets:`Branded 3x2 physical footprint
 Turnkey format: standard furniture and power package included
 Website and floorplan listing
 Agreed signage package
@@ -549,7 +549,7 @@ Summit-wide general branding
 Summit-wide general branding
 Website and shared social visibility
 Credited in the official aftermovie
-2 Full Event passes`,impact:["Brand Awareness"],type:["Branding & Visibility"]},{id:53,cat:"Venue Branding",title:"Lanyard Sponsor",price:4e4,exclusive:!1,avail:2,quote:`"The highest-frequency wearable branding at the event: your logo around delegates' necks both days."`,bullets:`Sold as two units - each unit brands one of the two lanyard designs, roughly half of all delegates
+2 Full Event passes`,impact:["Brand Awareness"],type:["Branding & Visibility"]},{id:53,cat:"Venue Branding",title:"Lanyard Sponsor",price:45e3,exclusive:!1,avail:2,quote:`"The highest-frequency wearable branding at the event: your logo around delegates' necks both days."`,bullets:`Sold as two units - each unit brands one of the two lanyard designs, roughly half of all delegates
 Summit-wide general branding
 Website, social and aftermovie visibility
 2 Full Event passes
