@@ -407,7 +407,7 @@ Partner logo on the website
 5 curated opt-in invite targets with facilitated invitations
 Website, social and aftermovie visibility
 3 Full Event passes + 1 Speaker pass
-⚠️ Invitations are facilitated on an opt-in basis - attendance is not guaranteed.`,impact:["Deal Flow","Lead Generation","Thought Leadership"],type:["Speaking & Content","Networking & Hospitality"]},{id:30,cat:"Workshops & Curated Networking",title:"6 Curated Introductions",price:15e3,exclusive:!1,avail:3,quote:'"Five introductions that matter more than fifty scans. We brief on your targets, match against the room and facilitate opt-in introductions with an outcome summary."',bullets:`Partner brief and target-account matching
+⚠️ Invitations are facilitated on an opt-in basis - attendance is not guaranteed.`,impact:["Deal Flow","Lead Generation","Thought Leadership"],type:["Speaking & Content","Networking & Hospitality"]},{id:30,cat:"Workshops & Curated Networking",title:"Curated Introduction Package",price:15e3,exclusive:!1,avail:3,quote:'"Five introductions that matter more than fifty scans. We brief on your targets, match against the room and facilitate opt-in introductions with an outcome summary."',bullets:`Partner brief and target-account matching
 Five facilitated opt-in introductions
 Outcome summary after the event
 ⚠️ Introductions are opt-in and subject to mutual approval.`,impact:["Deal Flow","Lead Generation"],type:["Networking & Hospitality"]},{id:31,cat:"Exhibition & Start-Up Zone",title:"Exhibition Stand 6x8, Gallery Showcase",price:6e4,exclusive:!0,avail:null,quote:'"The largest showcase position on the floor: a 6x8 gallery landmark for a brand that wants to anchor the exhibition."',bullets:`Premium 6x8 landmark position in the gallery
