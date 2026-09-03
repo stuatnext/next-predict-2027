@@ -245,7 +245,7 @@ function useScrollAnimation() {
 const pricing = [
 
   // Category Ownership
-  { id: 1, cat: 'Category Ownership', title: 'Headline Partner', price: 250000, exclusive: true, avail: null, featured: true,
+  { id: 1, cat: 'Category Ownership', title: 'Headline Partner', price: 300000, exclusive: true, avail: null, featured: true,
     quote: '"One brand over the entire event. Headline Partnership is category ownership of the prediction markets summit: your name in the event lock-up, first position everywhere the event appears."',
     bullets: 'Headline Partner status - the highest position in the partner hierarchy\n"Brought to you by [your brand]" event lock-up across venue and digital touchpoints\nPress release announcing your Headline Partnership\nPre-event executive interview, produced and distributed by NEXT.io media\nMost prominent venue branding across the event, plus top billing on website and digital channels\n30-second advertisement video played in conference breaks\nVisibility across event emails, social promotion, official photography and the aftermovie\n1x speaking opportunity confirmed with the conference production team\n10 Full Event passes + 2 VIP passes + 1 Speaker pass\n⚠️ One available - category ownership is sold once.',
     impact: ['Category Leadership', 'Brand Awareness', 'Thought Leadership'], type: ['Branding & Visibility', 'Speaking & Content'] },
