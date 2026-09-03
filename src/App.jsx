@@ -363,7 +363,7 @@ const pricing = [
     quote: '"Run the room you actually want to be in. A targeted workshop for your team plus five curated opt-in invitations to the accounts you name."',
     bullets: 'Host a targeted workshop session\n5 curated opt-in invite targets with facilitated invitations\nWebsite, social and aftermovie visibility\n3 Full Event passes + 1 Speaker pass\n⚠️ Invitations are facilitated on an opt-in basis - attendance is not guaranteed.',
     impact: ['Deal Flow', 'Lead Generation', 'Thought Leadership'], type: ['Speaking & Content', 'Networking & Hospitality'] },
-  { id: 30, cat: 'Workshops & Curated Networking', title: '6 Curated Introductions', price: 15000, exclusive: false, avail: 3,
+  { id: 30, cat: 'Workshops & Curated Networking', title: 'Curated Introduction Package', price: 15000, exclusive: false, avail: 3,
     quote: '"Five introductions that matter more than fifty scans. We brief on your targets, match against the room and facilitate opt-in introductions with an outcome summary."',
     bullets: 'Partner brief and target-account matching\nFive facilitated opt-in introductions\nOutcome summary after the event\n⚠️ Introductions are opt-in and subject to mutual approval.',
     impact: ['Deal Flow', 'Lead Generation'], type: ['Networking & Hospitality'] },
