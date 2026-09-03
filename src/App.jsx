@@ -1018,6 +1018,23 @@ export default function App() {
                   are paying to meet. Partner visibility runs across the venue, the livestream, NEXT's digital
                   reach (a ~40k LinkedIn following and the daily newsletter database) and the official aftermovie.
                 </p>
+                <p className="text-lg text-brand-gray leading-relaxed mt-4">
+                  A new event, but not an unproven team - partners score the NEXT Summit editions far above the
+                  industry norm:
+                </p>
+                <div className="grid grid-cols-3 gap-4 mt-6 max-w-xl">
+                  {[
+                    ['+69', 'Partner NPS · Valletta 2026', true],
+                    ['+62', 'Partner NPS · New York 2026', true],
+                    ['+27', 'Industry Benchmark', false],
+                  ].map(([num, label, ours], i) => (
+                    <div key={i} className="text-center px-3 py-5 rounded-xl bg-brand-white/5 border border-brand-white/10">
+                      <p className={`text-3xl font-bold mb-1 leading-none ${ours ? 'text-brand-yellow' : 'text-brand-gray'}`}>{num}</p>
+                      <p className="text-brand-gray text-xs uppercase tracking-widest leading-snug">{label}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-brand-gray mt-4 opacity-60">Partner Net Promoter Scores from the NEXT Summit 2026 post-event surveys; industry benchmark as reported by the survey platform.</p>
               </div>
             </div>
           </div>
