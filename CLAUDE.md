@@ -44,5 +44,13 @@ Single-page React (Vite + Tailwind) app. Main content lives in `src/App.jsx`
   Operator & Regulator $750 at 50%). Standard and Late are unchanged. The
   commercial master still carries the earlier Early Bird set — update it at
   the next master revision.
+- DECIDED (Stuart, 3 Sep 2026): comparison-driven repricing vs the New York
+  card — every matched product now prices above its New York equivalent.
+  Digital Event Guide €35k, Lanyard €40k per unit, Wi-Fi €28k, Stage 2 Per
+  Day €60k / Both-Days €105k (12.5% two-route discount) / Presenter €52k,
+  Exhibition 6x8 €120k / 8x4 €100k / 6x4 €70k / 3x2 €30k. The Start-Up Zone
+  (€9.5k/€16k) deliberately stays accessible and is not benchmarked against
+  New York. The commercial master still carries the earlier set — update at
+  the next master revision.
 - A small set of held items and unvalidated concepts is intentionally NOT in
   the brochure; the list lives in the commercial master, not in this repo.
