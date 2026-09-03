@@ -291,7 +291,7 @@ const pricing = [
     impact: ['Thought Leadership', 'Category Leadership'], type: ['Speaking & Content'] },
   { id: 13, cat: 'Leadership Stage', title: 'Leadership Stage Custom Session', price: 60000, exclusive: false, avail: 2,
     quote: '"Your C-level executive alongside a guest C-level of your choosing - a moderated fireside on the main stage, presented by your brand."',
-    bullets: 'Sponsor C-level plus guest C-level participant\n20-30 minute moderated discussion or fireside format\n"Presented by" session title on agenda, website and screens\n1 Full Event pass + 2 Speaker passes\n📅 One slot per day, subject to content approval.',
+    bullets: 'Sponsor C-level plus guest C-level participant\n25-30 minute moderated discussion or fireside format\n"Presented by" session title on agenda, website and screens\n1 Full Event pass + 2 Speaker passes\n📅 One slot per day, subject to content approval.',
     impact: ['Thought Leadership'], type: ['Speaking & Content'] },
   { id: 14, cat: 'Leadership Stage', title: 'Leadership Stage Chair Partner', price: 40000, exclusive: true, avail: null,
     quote: '"Every seat in the main conference room, both days. Chair branding puts your logo in every audience shot of the headline programme."',
@@ -315,13 +315,13 @@ const pricing = [
     quote: '"Own the second stage for a full day: backdrop, chair branding, a custom panel and a one-day hub presence built around your brand."',
     bullets: 'Stage 2 backdrop branding around the two stage screens\nDelegate-chair branding\n1 Custom Panel session included\nFull one-day hub presence\nWebsite, social and aftermovie visibility\n3 Full Event passes + 1 Speaker pass\n📅 One Day 1 and one Day 2 partnership available.\n⚠️ Either/or route with the both-days exclusive - never sold together.',
     impact: ['Brand Awareness', 'Thought Leadership'], type: ['Speaking & Content', 'Branding & Visibility'] },
-  { id: 19, cat: 'Stage 2 Hub', title: 'Stage 2 Presenter', price: 58000, exclusive: false, avail: 2,
+  { id: 19, cat: 'Stage 2 Hub', title: 'Stage 2 Presenter', price: 48000, exclusive: false, avail: 2,
     quote: '"A 20-minute C-level keynote on Stage 2, presented by your brand, with full production support."',
     bullets: '20-minute C-level keynote\nFull AV and production support\n"Presented by" session title on agenda and website\n2 Full Event passes + 1 Speaker pass\n📅 One slot per day, subject to programme.',
     impact: ['Thought Leadership'], type: ['Speaking & Content'] },
   { id: 20, cat: 'Stage 2 Hub', title: 'Stage 2 Custom Session', price: 40000, exclusive: false, avail: 2,
     quote: '"Your C-level and a guest C-level in a moderated Stage 2 fireside, presented by your brand."',
-    bullets: 'Sponsor C-level plus guest C-level participant\n20-30 minute moderated discussion or fireside format\n"Presented by" session title on agenda, website and screens\n1 Full Event pass + 2 Speaker passes\n📅 One slot per day, subject to content approval.',
+    bullets: 'Sponsor C-level plus guest C-level participant\n25-30 minute moderated discussion or fireside format\n"Presented by" session title on agenda, website and screens\n1 Full Event pass + 2 Speaker passes\n📅 One slot per day, subject to content approval.',
     impact: ['Thought Leadership'], type: ['Speaking & Content'] },
   { id: 21, cat: 'Stage 2 Hub', title: 'Stage 2 Branded Session', price: 25000, exclusive: false, avail: 2,
     quote: '"A \'Powered by\' Stage 2 session: 25-30 minutes with your C-level speaker and your brand on the room."',
@@ -364,8 +364,8 @@ const pricing = [
     bullets: 'Host a targeted workshop session\n5 curated opt-in invite targets with facilitated invitations\nWebsite, social and aftermovie visibility\n3 Full Event passes + 1 Speaker pass\n⚠️ Invitations are facilitated on an opt-in basis - attendance is not guaranteed.',
     impact: ['Deal Flow', 'Lead Generation', 'Thought Leadership'], type: ['Speaking & Content', 'Networking & Hospitality'] },
   { id: 30, cat: 'Workshops & Curated Networking', title: '6 Curated Introductions', price: 15000, exclusive: false, avail: 3,
-    quote: '"Six introductions that matter more than sixty scans. We brief on your targets, match against the room and facilitate opt-in introductions with an outcome summary."',
-    bullets: 'Partner brief and target-account matching\nSix facilitated opt-in introductions\nOutcome summary after the event\n⚠️ Introductions are opt-in and subject to mutual approval.',
+    quote: '"Five introductions that matter more than fifty scans. We brief on your targets, match against the room and facilitate opt-in introductions with an outcome summary."',
+    bullets: 'Partner brief and target-account matching\nFive facilitated opt-in introductions\nOutcome summary after the event\n⚠️ Introductions are opt-in and subject to mutual approval.',
     impact: ['Deal Flow', 'Lead Generation'], type: ['Networking & Hospitality'] },
 
   // Exhibition & Start-Up Zone
@@ -375,7 +375,7 @@ const pricing = [
     impact: ['Lead Generation', 'Brand Awareness'], type: ['Exhibition'] },
   { id: 32, cat: 'Exhibition & Start-Up Zone', title: 'Exhibition Stand 8x4, Planner Area Showcase', price: 50000, exclusive: true, avail: null,
     quote: '"An 8x4 showcase in the planner area - a landmark footprint where delegates plan their day and the traffic concentrates."',
-    bullets: 'Premium 8x4 position in the planner area\nBuild route or space-only route, agreed at contract\nWebsite and floorplan listing\nSignage and furniture/power package on the build route\nLead-capture eligibility, subject to registration and data setup\nIndividual pre-event welcome post on social media\nLogo on the partners section of the website\nLogo within the event guide\nMention in the post-event aftermovie\n4 Full Event passes\n📅 One position available.',
+    bullets: 'Premium 8x4 position in the delegate planning zone\n⚠️ Quantities and positions reflect the reference venue layout - final spec confirmed when the venue is announced\nBuild route or space-only route, agreed at contract\nWebsite and floorplan listing\nSignage and furniture/power package on the build route\nLead-capture eligibility, subject to registration and data setup\nIndividual pre-event welcome post on social media\nLogo on the partners section of the website\nLogo within the event guide\nMention in the post-event aftermovie\n4 Full Event passes\n📅 One position available.',
     impact: ['Lead Generation', 'Brand Awareness'], type: ['Exhibition'] },
   { id: 33, cat: 'Exhibition & Start-Up Zone', title: 'Exhibition Stand 6x4, Premium Gallery Position', price: 40000, exclusive: true, avail: null,
     quote: '"A top-position 6x4 physical showcase with premium gallery visibility."',
@@ -418,11 +418,11 @@ const pricing = [
     bullets: 'Meeting and dining area branding across both event days\nRefreshment bar backdrop branding\nCredenza branding and freestanding banner\nDigital display and projector visibility\nSummit-wide general branding\n4 Full Event passes',
     impact: ['Brand Awareness', 'Deal Flow'], type: ['Networking & Hospitality', 'Branding & Visibility'] },
   { id: 42, cat: 'Hospitality & Lounges', title: 'Gallery Nourish Bars, Exclusive (All Three)', price: 75000, exclusive: true, avail: null,
-    quote: '"Every coffee, every refuel, your brand: exclusive ownership of all three gallery Nourish Bars, with branded cups and the projector wall."',
-    bullets: 'Exclusive branding across all three gallery Nourish Bars\nBranded cups across the catering points\nProjector wall branding\nSummit-wide general branding\nWebsite, social and aftermovie visibility\n4 Full Event passes\n⚠️ Either/or route with the three individual Nourish Bar sponsorships - never sold together.',
+    quote: '"Every coffee, every refuel, your brand: exclusive ownership of all three Nourish Bars, with branded cups and the projector wall."',
+    bullets: 'Exclusive branding across all three Nourish Bars\n⚠️ Quantities and positions reflect the reference venue layout - final spec confirmed when the venue is announced\nBranded cups across the catering points\nProjector wall branding\nSummit-wide general branding\nWebsite, social and aftermovie visibility\n4 Full Event passes\n⚠️ Either/or route with the three individual Nourish Bar sponsorships - never sold together.',
     impact: ['Brand Awareness'], type: ['Networking & Hospitality', 'Branding & Visibility'] },
   { id: 43, cat: 'Hospitality & Lounges', title: 'Nourish Bar Sponsor', price: 28500, exclusive: false, avail: 3,
-    quote: '"High-frequency hospitality branding: one of the three gallery Nourish Bars, where every delegate returns several times a day."',
+    quote: '"High-frequency hospitality branding: one of the three Nourish Bars, where every delegate returns several times a day."',
     bullets: 'Branding across one gallery Nourish Bar and its credenzas\nSummit-wide general branding\nWebsite, social and aftermovie visibility\n2 Full Event passes\n📅 Three bars available individually.\n⚠️ Either/or route with the all-three exclusive - never sold together.',
     impact: ['Brand Awareness'], type: ['Networking & Hospitality', 'Branding & Visibility'] },
   { id: 44, cat: 'Hospitality & Lounges', title: "Speakers' Lounge Sponsor", price: 54000, exclusive: true, avail: null,
@@ -451,7 +451,7 @@ const pricing = [
   // Venue Branding
   { id: 49, cat: 'Venue Branding', title: 'Online & Onsite Registration Sponsor', price: 110000, exclusive: true, avail: null,
     quote: '"Meet every delegate before the event starts. Registration wraps the whole journey in your brand - from the booking page to the arrival desk."',
-    bullets: 'Branding on the registration page, confirmation emails and digital tickets\nOnsite registration area branding\n2 curved LED screens at registration\nBranded registration desk\nSummit-wide general branding\n4 Full Event passes',
+    bullets: 'Branding on the registration page, confirmation emails and digital tickets\nOnsite registration area branding\n2 curved LED screens at registration\n⚠️ Quantities and positions reflect the reference venue layout - final spec confirmed when the venue is announced\nBranded registration desk\nSummit-wide general branding\n4 Full Event passes',
     impact: ['Brand Awareness', 'Lead Generation'], type: ['Branding & Visibility'] },
   { id: 50, cat: 'Venue Branding', title: 'Cloakroom Sponsor', price: 32000, exclusive: true, avail: null,
     quote: '"First in, last out: the cloakroom greets every coat, bag and delegate on the way in and the way home."',
@@ -459,19 +459,19 @@ const pricing = [
     impact: ['Brand Awareness'], type: ['Branding & Visibility'] },
   { id: 51, cat: 'Venue Branding', title: 'Stair Risers Sponsor', price: 31000, exclusive: true, avail: null,
     quote: '"Fifteen stair risers behind registration, plus an LCD video position - branding every delegate climbs past all day."',
-    bullets: 'Branding across 15 stair risers behind registration\nLCD video advertisement\nSummit-wide general branding\n2 Full Event passes',
+    bullets: 'Branding across 15 stair risers behind registration\n⚠️ Quantities and positions reflect the reference venue layout - final spec confirmed when the venue is announced\nLCD video advertisement\nSummit-wide general branding\n2 Full Event passes',
     impact: ['Brand Awareness'], type: ['Branding & Visibility'] },
   { id: 52, cat: 'Venue Branding', title: 'Badge Sponsor', price: 32000, exclusive: true, avail: null,
     quote: '"On every delegate, in every conversation, in every photo: your logo on all event badges."',
     bullets: 'Logo on all delegate badges\nSummit-wide general branding\nWebsite and shared social visibility\nCredited in the official aftermovie\n2 Full Event passes',
     impact: ['Brand Awareness'], type: ['Branding & Visibility'] },
   { id: 53, cat: 'Venue Branding', title: 'Lanyard Sponsor', price: 30000, exclusive: false, avail: 2,
-    quote: '"The highest-frequency wearable branding at the event: your logo around delegates\' necks all week."',
-    bullets: 'Logo on half of all delegate lanyards per unit\nSummit-wide general branding\nWebsite, social and aftermovie visibility\n2 Full Event passes\n📅 Two units available - take both for full lanyard coverage.',
+    quote: '"The highest-frequency wearable branding at the event: your logo around delegates\' necks both days."',
+    bullets: 'Sold as two units - each unit brands one of the two lanyard designs, roughly half of all delegates\nSummit-wide general branding\nWebsite, social and aftermovie visibility\n2 Full Event passes\n📅 Two units available - take both for full lanyard coverage.',
     impact: ['Brand Awareness'], type: ['Branding & Visibility'] },
   { id: 54, cat: 'Venue Branding', title: 'Restroom Sponsorship', price: 28000, exclusive: true, avail: null,
     quote: '"Guaranteed reach, zero competition: exclusive branding across every restroom in the venue."',
-    bullets: 'Branding across all venue restrooms\nMirror vinyls and clings\n12 branded toiletry baskets\nBranded merchandise option\nExclusive category visibility\nWebsite, social and aftermovie visibility\n2 Full Event passes',
+    bullets: 'Branding across all venue restrooms\nMirror vinyls and clings\n⚠️ Quantities and positions reflect the reference venue layout - final spec confirmed when the venue is announced\n12 branded toiletry baskets\nBranded merchandise option\nExclusive category visibility\nWebsite, social and aftermovie visibility\n2 Full Event passes',
     impact: ['Brand Awareness'], type: ['Branding & Visibility'] },
   { id: 55, cat: 'Venue Branding', title: 'Digital Event Guide Sponsor', price: 23000, exclusive: true, avail: null,
     quote: '"Every time a delegate checks the agenda, they see you: the digital event guide, QR touchpoints and agenda branding."',
@@ -823,7 +823,7 @@ function CalculatorPanel({ cart, onRemove, rebooking, setRebooking, open, setOpe
                 className="w-4 h-4 accent-[#ffcf33]" />
               <span className="text-sm text-brand-white">
                 2026 partner rebooking rate <strong className="text-brand-yellow">(-15%)</strong>
-                <span className="block text-xs text-brand-gray mt-0.5">Available to returning 2026 partners. Not combinable with other offers.</span>
+                <span className="block text-xs text-brand-gray mt-0.5">Available to returning 2026 partners when confirmed within one month of the previous edition. Not combinable with other offers.</span>
               </span>
             </label>
             {cart.length === 0 ? (
@@ -1123,7 +1123,7 @@ export default function App() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4" data-anim style={anim}>
               {[
-                ['Silver', 'Up to €30k', 'text-brand-gray', 'Silver position and logo recognition across agreed listings, website and onsite displays.'],
+                ['Silver', 'Below €30k', 'text-brand-gray', 'Silver position and logo recognition across agreed listings, website and onsite displays.'],
                 ['Gold', '€30k – €79,999', 'text-yellow-400', 'Gold position and logo recognition across agreed listings, website and onsite displays.'],
                 ['Platinum', '€80k – €134,999', 'text-blue-300', 'Platinum position and logo recognition across agreed listings, website and onsite displays.'],
                 ['Diamond', '€135k+', 'text-cyan-100', 'Diamond position and logo recognition across agreed listings, website and onsite displays.'],
