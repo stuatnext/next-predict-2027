@@ -364,8 +364,8 @@ const pricing = [
     bullets: 'Host a targeted workshop session\n5 curated opt-in invite targets with facilitated invitations\nWebsite, social and aftermovie visibility\n3 Full Event passes + 1 Speaker pass\n⚠️ Invitations are facilitated on an opt-in basis - attendance is not guaranteed.',
     impact: ['Deal Flow', 'Lead Generation', 'Thought Leadership'], type: ['Speaking & Content', 'Networking & Hospitality'] },
   { id: 30, cat: 'Workshops & Curated Networking', title: 'Curated Introduction Package', price: 15000, exclusive: false, avail: 3,
-    quote: '"Five introductions that matter more than fifty scans. We brief on your targets, match against the room and facilitate opt-in introductions with an outcome summary."',
-    bullets: 'Partner brief and target-account matching\nFive facilitated opt-in introductions\nOutcome summary after the event\n⚠️ Introductions are opt-in and subject to mutual approval.',
+    quote: '"Six introductions that matter more than sixty scans. We brief on your targets, match against the room and facilitate opt-in introductions with an outcome summary."',
+    bullets: 'Partner brief and target-account matching\nSix facilitated opt-in introductions\nOutcome summary after the event\n⚠️ Introductions are opt-in and subject to mutual approval.',
     impact: ['Deal Flow', 'Lead Generation'], type: ['Networking & Hospitality'] },
 
   // Exhibition & Start-Up Zone
@@ -465,7 +465,7 @@ const pricing = [
     quote: '"Fifteen stair risers behind registration, plus an LCD video position - branding every delegate climbs past all day."',
     bullets: 'Branding across 15 stair risers behind registration\n⚠️ Quantities and positions reflect the reference venue layout - final spec confirmed when the venue is announced\nLCD video advertisement\nSummit-wide general branding\n2 Full Event passes',
     impact: ['Brand Awareness'], type: ['Branding & Visibility'] },
-  { id: 52, cat: 'Venue Branding', title: 'Badge Sponsor', price: 32000, exclusive: true, avail: null,
+  { id: 52, cat: 'Venue Branding', title: 'Badge Sponsor', price: 30800, exclusive: true, avail: null,
     quote: '"On every delegate, in every conversation, in every photo: your logo on all event badges."',
     bullets: 'Logo on all delegate badges\nSummit-wide general branding\nWebsite and shared social visibility\nCredited in the official aftermovie\n2 Full Event passes',
     impact: ['Brand Awareness'], type: ['Branding & Visibility'] },
@@ -511,11 +511,11 @@ const types = [...new Set(pricing.flatMap((p) => p.type))]
 
 // ─── Ticket ladder (public rates, USD) ──────────────────────────────────────
 const ticketLadder = [
-  { type: 'VIP', eb: 2599, std: 2999, late: 3399, note: 'Premium all-event access with first-priority networking.' },
-  { type: 'Full Event', eb: 1499, std: 1799, late: 2099, note: 'The core pass: full programme plus the main networking events.' },
-  { type: 'Conference Only', eb: 1099, std: 1249, late: 1449, note: 'Both conference days, without the evening networking programme.' },
-  { type: 'Day Pass', eb: 899, std: 1079, late: 1259, note: 'One event day of your choice, including that evening’s event.' },
-  { type: 'Operator & Regulator', eb: 750, std: 900, late: 1050, note: 'Verified operators and regulators. Verification required at checkout.' },
+  { type: 'VIP', eb: 2199, std: 2999, late: 3399, note: 'Premium all-event access with first-priority networking.' },
+  { type: 'Full Event', eb: 1299, std: 1799, late: 2099, note: 'The core pass: full programme plus the main networking events.' },
+  { type: 'Conference Only', eb: 949, std: 1249, late: 1449, note: 'Both conference days, without the evening networking programme.' },
+  { type: 'Day Pass', eb: 779, std: 1079, late: 1259, note: 'One event day of your choice, including that evening’s event.' },
+  { type: 'Operator & Regulator', eb: 650, std: 900, late: 1050, note: 'Verified operators and regulators. Verification required at checkout.' },
 ]
 
 // ─── Tier Progress bar ──────────────────────────────────────────────────────
@@ -709,7 +709,7 @@ function TicketsSection({ anim }) {
           <h2 className="text-4xl md:text-5xl font-bold text-brand-yellow mb-4 uppercase">Delegate Tickets</h2>
           <p className="text-brand-gray max-w-3xl mx-auto">
             Three published price stages: <strong className="text-brand-white">Early Bird</strong>, <strong className="text-brand-white">Standard</strong> and <strong className="text-brand-white">Late</strong>.
-            Early Bird pricing goes live on <strong className="text-brand-white">17 November 2026</strong>. Each stage closes on its published date or when its allocation
+            Early Bird pricing goes live on <strong className="text-brand-white">16 November 2026</strong>. Each stage closes on its published date or when its allocation
             sells out, whichever comes first - and prices never come back down.
           </p>
         </div>

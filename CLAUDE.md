@@ -38,12 +38,14 @@ Single-page React (Vite + Tailwind) app. Main content lives in `src/App.jsx`
   tokens — no separate palette or display face for this event.
 - Venue/date lines say "October 2027 · New York City · exact dates and venue
   to be announced" — update them the moment Event Ops confirms.
-- DECIDED (Stuart, 31 Aug 2026): the ticket ladder uses the approved plan's
-  Early Bird prices (VIP $2,599 / Full $1,499 / Conference $1,099), with the
-  two formula-linked rates cascaded from Full Event (Day Pass $899 at 60%,
-  Operator & Regulator $750 at 50%). Standard and Late are unchanged. The
-  commercial master still carries the earlier Early Bird set — update it at
-  the next master revision.
+- DECIDED (Stuart, 1 Sep 2026, supersedes the 31 Aug plan-EB note): the
+  ticket ladder is the Commercial Master ladder, as locked in the
+  consolidation workbook's Ticket Ladders sheet — EB/Std/Late: VIP
+  $2,199/$2,999/$3,399 · Full $1,299/$1,799/$2,099 · Conference
+  $949/$1,249/$1,449 · Day Pass $779/$1,079/$1,259 (60% of Full) ·
+  Operator & Regulator $650/$900/$1,050 (50% of Full). Early Bird goes
+  live 16 Nov 2026. The ladder also carries a gated Start-up rate
+  ($549/$749/$849, staged) that is deliberately NOT shown on the card.
 - DECIDED (Stuart, 3 Sep 2026, two rounds — Pierre's mandate: NEXTPredict
   prices at roughly double NYC 2026, which NEXTPredict 2026 already carried;
   NYC 2027 rose ~50% on 2026, so the mandate ≈ ×1.33 of the live 2027 NY
